@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" >
+
+        <com.android.taylorzero.login.pic.TaylorZeroPicturesView
+            android:id="@+id/activity_pic_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/pic_ui_bg" />
+
+        <LinearLayout
+            android:id="@+id/layout_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:alpha="0.4"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingRight="20dp" >
+
+            <ImageView
+                android:id="@+id/imgview_show_pre"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/login_activity_pic_show_pre_pic" />
+
+            <ImageView
+                android:id="@+id/imgview_show_play"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/login_activity_pic_show_stop_pic" />
+
+            <ImageView
+                android:id="@+id/imgview_show_next"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/login_activity_pic_show_next_pic" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

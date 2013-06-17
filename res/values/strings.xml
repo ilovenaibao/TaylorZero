@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Zero</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <!-- login strings -->
+    <string name="login_start">开始</string>
+    <string name="login_loading">载入</string>
+    <string name="login_pic">相册</string>
+    <string name="login_exit">退出</string>
+    <string name="login_preface">序言</string>
+    
+    <string name="not_found_pic">沒有找到圖片</string>
+
+</resources>

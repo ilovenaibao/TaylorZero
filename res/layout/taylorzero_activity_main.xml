@@ -1,0 +1,79 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zero_start_bg"
+    android:orientation="vertical"
+    tools:context=".TaylorZeroMainActivity_Test" >
+
+    <TextView
+        android:id="@+id/tv_show_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/bt_play_mp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:soundEffectsEnabled="false"
+                    android:text="play mp3" />
+
+                <Button
+                    android:id="@+id/bt_stop_mp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="stop mp3" />
+
+                <Button
+                    android:id="@+id/bt_pause_mp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pause mp3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/bt_playMp4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="play mp4" />
+
+                <Button
+                    android:id="@+id/bt_stopMp4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="stop mp4" />
+
+                <Button
+                    android:id="@+id/bt_pauseMp4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="pause mp4" />
+            </LinearLayout>
+
+            <VideoView
+                android:id="@+id/mp4_view"
+                android:layout_width="300dp"
+                android:layout_height="250dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
