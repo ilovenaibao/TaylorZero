@@ -54,21 +54,23 @@ public class TaylorZeroPicActivity extends Activity {
 		};
 		pngFileFilter.addType("zero_pic");
 		File dir = new File(path);
-		String[] pngFileList = dir.list(pngFileFilter);
-		if (!path.equals("")) {
-
-		}
-		Bitmap bmp = TaylorZeroBmp.loadBitmapAutoSize(path, scrInfo.scrWidth,
-				scrInfo.scrHeight);
+		String[] pngFileListPath = dir.list(pngFileFilter);
+		File[] pngFileList = dir.listFiles(pngFileFilter);
+		Bitmap bmp = TaylorZeroBmp.loadBitmapAutoSize(path + "debug.zero_pic",
+				scrInfo.scrWidth, scrInfo.scrHeight);
 		if (null != pic_main_view && null != bmp) {
 			pic_main_view.initializePicturesView(scrInfo.scrWidth,
 					scrInfo.scrHeight);
 			bmp = TaylorZeroBmp.BitmapRatioMatrix(bmp, scrInfo.scrWidth,
 					scrInfo.scrHeight);
+			pic_main_view.viewValue.setBackGroundBitmap(R.drawable.pic_ui_bg,
+					scrInfo.scrWidth, scrInfo.scrHeight);
 			pic_main_view.viewValue.setDrawBmpCacheBmp(bmp);
+			pic_main_view.viewValue.setLoadingBitmapList(path, pngFileListPath);
 			BmpPosValue bmpPos = pic_main_view.viewValue.setDrawBmpCacheBmpPos(
-					this, TaylorZeroPicturesViewValues.SHOW_BMP_CENTER);
-			pic_main_view.viewValue.setShowBmp(bmpPos.left, bmpPos.top, 0, 0);
+					this, bmp, TaylorZeroPicturesViewValues.SHOW_BMP_CENTER);
+			pic_main_view.viewValue.setShowBmp(bmpPos.left, bmpPos.top, 0, 0,
+					0, 0);
 		} else {
 			Toast.makeText(this, R.string.not_found_pic, Toast.LENGTH_SHORT);
 			finish();

@@ -3,6 +3,8 @@ package com.android.taylorzero.login.pic;
 import java.io.File;
 import java.io.FileOutputStream;
 
+import com.android.taylorzero.login.pic.TaylorZeroPicturesViewValues.BmpPosValue;
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -20,6 +22,8 @@ public class TaylorZeroPicturesView extends View {
 	// draw bmp on canvas
 	public TaylorZeroPicturesViewValues viewValue = null;
 	private float touchDown_x, touchDown_y, touchUp_x, touchUp_y;
+	private int scrWidth, scrHeight;
+	private int isLoadingNextBmp;
 
 	/**
 	 * Initialize TaylorZeroPicturesView
@@ -29,8 +33,10 @@ public class TaylorZeroPicturesView extends View {
 	public TaylorZeroPicturesView(Context context) {
 		super(context);
 		parentContext = context;
-		viewValue = new TaylorZeroPicturesViewValues();
+		viewValue = new TaylorZeroPicturesViewValues(context);
 		touchDown_x = touchDown_y = touchUp_x = touchDown_y = 0;
+		scrWidth = scrHeight = 0;
+		isLoadingNextBmp = 0;
 	}
 
 	/**
@@ -42,7 +48,7 @@ public class TaylorZeroPicturesView extends View {
 	public TaylorZeroPicturesView(Context context, AttributeSet set) {
 		super(context, set);
 		parentContext = context;
-		viewValue = new TaylorZeroPicturesViewValues();
+		viewValue = new TaylorZeroPicturesViewValues(context);
 	}
 
 	public void initializePicturesView(int width, int height) {
@@ -50,15 +56,20 @@ public class TaylorZeroPicturesView extends View {
 		viewValue.createDrawBmpCache(width, height);
 		viewValue.setDrawBmpCacheCanvas();
 		viewValue.createDrawPaint();
+		scrWidth = width;
+		scrHeight = height;
 	}
 
 	private void touchEvent(MotionEvent event) {
 		switch (event.getAction()) {
 		case MotionEvent.ACTION_DOWN:
+			touchDownEvent(event);
 			break;
 		case MotionEvent.ACTION_UP:
+			// touchUpEvent(event);
 			break;
 		case MotionEvent.ACTION_MOVE:
+			touchMoveEvent(event);
 			break;
 		}
 	}
@@ -74,7 +85,46 @@ public class TaylorZeroPicturesView extends View {
 	}
 
 	private void touchMoveEvent(MotionEvent event) {
+		touchUp_x = event.getX();
+		touchUp_y = event.getY();
+		if (null != viewValue) {
+			float dividX = touchUp_x - touchDown_x;
+			float dividY = touchUp_y - touchDown_y;
+			BmpPosValue tmpShowBmpPos = viewValue.getShowBmpPos();
+			tmpShowBmpPos.left += dividX;
+			// tmpShowBmpPos.top += dividY;
+			if (0 > dividX) {
+				int showBmpCount = viewValue.getShowBmpCount();
+				if (0 == isLoadingNextBmp
+						|| (0 >= tmpShowBmpPos.left && -1 == isLoadingNextBmp)) {
+					isLoadingNextBmp = 1;
+					viewValue.setNextBmp(showBmpCount + 1, scrWidth, scrHeight,
+							isLoadingNextBmp);
+				}
+			} else if (0 < dividX) {
+				int showBmpCount = viewValue.getShowBmpCount();
+				if (0 == isLoadingNextBmp
+						|| (0 <= tmpShowBmpPos.left && 1 == isLoadingNextBmp)) {
+					isLoadingNextBmp = -1;
+					viewValue.setNextBmp(showBmpCount - 1, scrWidth, scrHeight,
+							isLoadingNextBmp);
+				}
+			}
+			viewValue.setShowBmp(tmpShowBmpPos.left, tmpShowBmpPos.top, 0, 0,
+					dividX, dividY);
+			touchDown_x = touchUp_x;
+			touchDown_y = touchUp_y;
+			this.invalidate();
+		}
+	}
 
+	public void resetNewShowBmp(Bitmap bmp, float left, float top, float right,
+			float bottom, float dividX, float dividY) {
+		if (null != viewValue) {
+			viewValue.setDrawBmpCacheBmp(bmp);
+			viewValue.setShowBmp(left, top, right, bottom, dividX, dividY);
+			invalidate();
+		}
 	}
 
 	@Override
@@ -86,7 +136,8 @@ public class TaylorZeroPicturesView extends View {
 	public boolean onTouchEvent(MotionEvent event) {
 		// TODO Auto-generated method stub
 		touchEvent(event);
-		return super.onTouchEvent(event);
+		return true;
+		// return super.onTouchEvent(event);
 	}
 
 	@Override

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gallery_layout"
+    android:layout_width="142dp"
+    android:layout_height="96dp"
+    android:background="@drawable/chose_morlist" >
+
+    <ImageView
+        android:id="@+id/imageItem"
+        android:layout_width="138dp"
+        android:layout_height="91dp"
+        android:scaleType="fitCenter" />
+
+</LinearLayout>

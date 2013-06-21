@@ -10,7 +10,9 @@
     <string name="login_pic">相册</string>
     <string name="login_exit">退出</string>
     <string name="login_preface">序言</string>
-    
     <string name="not_found_pic">沒有找到圖片</string>
+
+    <!-- Shown in LauncherActivity when the requested target Intent didn't return any matching Activities, leaving the list empty. -->
+    <string name="activity_list_empty">No matching activities found.</string>
 
 </resources>

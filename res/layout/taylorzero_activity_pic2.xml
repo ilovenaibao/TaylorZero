@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/pic_ui_bg"
+    android:orientation="vertical" >
+
+    <Gallery
+        android:id="@+id/mygallery"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="5dp"
+        android:fadingEdge="horizontal|vertical"
+        android:fadingEdgeLength="50dp" />
+
+</RelativeLayout>
