@@ -18,4 +18,19 @@
         android:fadingEdge="horizontal|vertical"
         android:fadingEdgeLength="50dp" />
 
+    <LinearLayout
+        android:id="@+id/list_layout"
+        android:layout_width="300dp"
+        android:layout_height="600dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border_select" >
+
+        <FrameLayout
+            android:id="@+id/test_bed"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <!-- We will add the DSLVFragment inside the FrameLayout in code -->
+    </LinearLayout>
+
 </RelativeLayout>

@@ -31,31 +31,31 @@ public class TaylorZeroMainActivity_Test extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.taylorzero_activity_main);
 		mContext = this;
-		setVolumeControlStream(AudioManager.STREAM_MUSIC);
+		// setVolumeControlStream(AudioManager.STREAM_MUSIC);
+		//
+		// soundPool = new SoundPool(20, AudioManager.STREAM_MUSIC, 0);
+		// AssetManager assetManager = this.getAssets();
+		// AssetFileDescriptor descriptor = null;
+		// try {
+		// descriptor = assetManager
+		// .openFd("sound/chos_ui_activity_click.mp3");
+		// explosionId = soundPool.load(descriptor, 1);
+		// Button bt_test = (Button) findViewById(R.id.bt_play_mp3);
+		// bt_test.setOnClickListener(new OnClickListener() {
+		//
+		// @Override
+		// public void onClick(View v) {
+		// // TODO Auto-generated method stub
+		// soundPool.play(explosionId, 1.0f, 1.0f, 0, 0, 1);
+		// }
+		// });
+		// } catch (IOException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
 
-		soundPool = new SoundPool(20, AudioManager.STREAM_MUSIC, 0);
-		AssetManager assetManager = this.getAssets();
-		AssetFileDescriptor descriptor = null;
-		try {
-			descriptor = assetManager
-					.openFd("sound/chos_ui_activity_click.mp3");
-			explosionId = soundPool.load(descriptor, 1);
-			Button bt_test = (Button) findViewById(R.id.bt_play_mp3);
-			bt_test.setOnClickListener(new OnClickListener() {
-
-				@Override
-				public void onClick(View v) {
-					// TODO Auto-generated method stub
-					soundPool.play(explosionId, 1.0f, 1.0f, 0, 0, 1);
-				}
-			});
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-		// mp3Test = new TestPlayMp3Class(this);
-		// mp3Test.playMp3Test();
+		mp3Test = new TestPlayMp3Class(this);
+		mp3Test.playMp3Test();
 		//
 		mp4Test = new TestPlayMp4Class(this);
 		mp4Test.playMp4Test();

@@ -43,7 +43,7 @@ public class TestPlayMp3Class {
 				.findViewById(R.id.bt_stop_mp3);
 		bt_pauseMp3 = (Button) ((Activity) mContext)
 				.findViewById(R.id.bt_pause_mp3);
-		String mp3_path = "/mnt/sdcard/Zero/test.mp3";
+		String mp3_path = "/mnt/sdcard/Zero/res/Sound/inter/chos_ui_activity_click_new.mp3";
 		Uri mp3_uri = Uri.fromFile(new File(mp3_path));
 		mediaplayer_mp3 = MediaPlayer.create(mContext, mp3_uri);
 		tv_show_mp3_status = (TextView) ((Activity) mContext)

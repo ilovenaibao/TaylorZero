@@ -10,11 +10,11 @@ public class TaylorZeroOpeningSetting {
 	public static final String preface_mp4_path = mp4_path + ".zero_preface";
 	public static final String mp3_path = "Zero/res/Sound/";
 	public static final String opening_mp3_bg_path = mp3_path
-			+ "outer/.Zero_start_ui_bg";
+			+ "outer/Zero_start_ui_bg.mp3"; // .Zero_start_ui_bg
 	public static final String touch_start_ui_activity_mp3_path = mp3_path
-			+ "inter/.chos_ui_activity_touch";
+			+ "inter/chos_ui_activity_touch.mp3";
 	public static final String click_start_ui_activity_mp3_path = mp3_path
-			+ "inter/.chos_ui_activity_click_new";
+			+ "inter/chos_ui_activity_click_new.mp3";
 
 	public static final String[] preface_mp4_caption = { "终结的世界，初始的世界。",
 			"世界处在虚无之时，存在着一个世界。", "人繁衍，人相残的世界，有人认为那是不完整的因缘。",

@@ -3,12 +3,13 @@
     android:id="@+id/gallery_layout"
     android:layout_width="142dp"
     android:layout_height="96dp"
-    android:background="@drawable/chose_morlist" >
+    android:background="@drawable/border_un_select" >
 
     <ImageView
         android:id="@+id/imageItem"
         android:layout_width="138dp"
         android:layout_height="91dp"
+        android:contentDescription="@string/gallery_imgview_contentDescribe"
         android:scaleType="fitCenter" />
 
 </LinearLayout>

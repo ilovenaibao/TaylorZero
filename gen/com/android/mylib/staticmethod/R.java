@@ -8,20 +8,20 @@ package com.android.mylib.staticmethod;
 
 public final class R {
 	public static final class id {
-		public static final int error_printf_tv = 0x7f080001;
-		public static final int current_action_1 = 0x7f080003;
-		public static final int ScrollLayoutTest = 0x7f080000;
-		public static final int loading_data_view_1 = 0x7f080002;
-		public static final int my_static_method_lib_media_mp4_view = 0x7f080004;
+		public static final int error_printf_tv = 0x7f05000b;
+		public static final int current_action_1 = 0x7f05000d;
+		public static final int ScrollLayoutTest = 0x7f05000a;
+		public static final int loading_data_view_1 = 0x7f05000c;
+		public static final int my_static_method_lib_media_mp4_view = 0x7f05000e;
 	}
 	public static final class string {
-		public static final int appShutdownStr = 0x7f040001;
-		public static final int loading_data = 0x7f040000;
+		public static final int appShutdownStr = 0x7f060001;
+		public static final int loading_data = 0x7f060000;
 	}
 	public static final class layout {
-		public static final int my_static_method_lib_loading_view_1 = 0x7f030002;
-		public static final int my_static_method_lib_dragpapers_scrolllayout = 0x7f030000;
-		public static final int my_static_method_lib_error_printf_view = 0x7f030001;
-		public static final int my_static_method_lib_media_mp4_view = 0x7f030003;
+		public static final int my_static_method_lib_loading_view_1 = 0x7f03000a;
+		public static final int my_static_method_lib_dragpapers_scrolllayout = 0x7f030008;
+		public static final int my_static_method_lib_error_printf_view = 0x7f030009;
+		public static final int my_static_method_lib_media_mp4_view = 0x7f03000b;
 	}
 }

@@ -8,15 +8,19 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.BaseAdapter;
 import android.widget.Gallery;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -27,15 +31,34 @@ import com.android.mylib.xscan.FileTypeFilter;
 import com.android.taylorzero.R;
 import com.android.taylorzero.TaylorZeroBmp;
 import com.android.taylorzero.login.pic.TaylorZeroPicturesViewValues.BmpPosValue;
+import com.android.taylorzero.login.pic.popdirlist.DSLVFragmentClicks;
+import com.android.taylorzero.login.pic.popdirlist.DragInitModeDialog;
+import com.android.taylorzero.login.pic.popdirlist.EnablesDialog;
+import com.android.taylorzero.login.pic.popdirlist.RemoveModeDialog;
 import com.android.taylorzero.setting.TaylorZeroPicActivitySetting;
+import com.mobeta.android.dslv.DragSortController;
 
-public class TaylorZeroPicActivity2 extends Activity {
+public class TaylorZeroPicActivity2 extends FragmentActivity implements
+		RemoveModeDialog.RemoveOkListener, DragInitModeDialog.DragOkListener,
+		EnablesDialog.EnabledOkListener {
+
+	private int mNumHeaders = 0;
+	private int mNumFooters = 0;
+
+	private int mDragStartMode = DragSortController.ON_DRAG;
+	private boolean mRemoveEnabled = true;
+	private int mRemoveMode = DragSortController.FLING_REMOVE;
+	private boolean mSortEnabled = true;
+	private boolean mDragEnabled = true;
+
+	private String mTag = "dslvTag";
 
 	public Context mContext = null;
 	private RelativeLayout main_layout = null;
 	private String picPath = "";
 	TaylorZeroPicturesView mOneMirroView = null;
 	MyLibScreenInfo scrInfo = null;
+	View pre_border_select_view = null;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -44,11 +67,26 @@ public class TaylorZeroPicActivity2 extends Activity {
 				MyLibScreenSetting.SCREEN_SHOW_THEME_FULL_SCREEN);
 		MyLibScreenSetting.SettingScreenHorizontal(this);
 		setContentView(R.layout.taylorzero_activity_pic2);
+		if (savedInstanceState == null) {
+			LinearLayout list_layout = (LinearLayout) findViewById(R.id.list_layout);
+			if (null != list_layout) {
+				ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) list_layout
+						.getLayoutParams();
+				lp.width = 300;
+				lp.height = 500;
+				list_layout.setLayoutParams(lp);
+				list_layout.setA
+			}
+			getSupportFragmentManager().beginTransaction()
+					.add(R.id.test_bed, getNewDslvFragment(), mTag).commit();
+		}
+
 		mContext = this;
 		main_layout = (RelativeLayout) findViewById(R.id.layout1);
 		Gallery gallery = (Gallery) findViewById(R.id.mygallery);
 		scrInfo = MyLibScreenSetting.GetScreenSize(this, 1);
 		scrInfo.scrHeight -= 120;
+		// scrInfo.scrWidth -= 400;
 		picPath = My_Static_Method_Lib.getResAbsolutePath(mContext,
 				TaylorZeroPicActivitySetting.save_pic_path, false);
 		FileTypeFilter pngFileFilter = new FileTypeFilter() {
@@ -68,7 +106,8 @@ public class TaylorZeroPicActivity2 extends Activity {
 					ViewGroup.LayoutParams.WRAP_CONTENT);
 			rp.addRule(RelativeLayout.ABOVE, R.id.mygallery);
 			rp.addRule(RelativeLayout.ALIGN_PARENT_TOP, RelativeLayout.TRUE);
-			main_layout.addView(mOneMirroView);
+			int childCount = main_layout.getChildCount();
+			main_layout.addView(mOneMirroView, 1);
 			mOneMirroView.setLayoutParams(rp);
 		}
 
@@ -85,6 +124,17 @@ public class TaylorZeroPicActivity2 extends Activity {
 		// TODO Auto-generated method stub
 		MyLibScreenSetting.SettingScreenHorizontal(this);
 		super.onResume();
+	}
+
+	private Fragment getNewDslvFragment() {
+		DSLVFragmentClicks f = DSLVFragmentClicks.newInstance(mNumHeaders,
+				mNumFooters);
+		f.removeMode = mRemoveMode;
+		f.removeEnabled = mRemoveEnabled;
+		f.dragStartMode = mDragStartMode;
+		f.sortEnabled = mSortEnabled;
+		f.dragEnabled = mDragEnabled;
+		return f;
 	}
 
 	private Handler mHandler = new Handler() {
@@ -128,6 +178,12 @@ public class TaylorZeroPicActivity2 extends Activity {
 			msg.what = 1;
 			msg.arg1 = arg2;
 			mHandler.sendMessage(msg);
+			arg1.setBackgroundResource(R.drawable.border_select);
+			if (null != pre_border_select_view) {
+				pre_border_select_view
+						.setBackgroundResource(R.drawable.border_un_select);
+			}
+			pre_border_select_view = arg1;
 		}
 
 		@Override
@@ -209,5 +265,23 @@ public class TaylorZeroPicActivity2 extends Activity {
 
 			return position;
 		}
+	}
+
+	@Override
+	public void onEnabledOkClick(boolean drag, boolean sort, boolean remove) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onDragOkClick(int removeMode) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void onRemoveOkClick(int removeMode) {
+		// TODO Auto-generated method stub
+
 	}
 }

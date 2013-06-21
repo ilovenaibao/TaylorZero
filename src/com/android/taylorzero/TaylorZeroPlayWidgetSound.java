@@ -42,6 +42,12 @@ public class TaylorZeroPlayWidgetSound {
 		}
 		Uri mp3_uri = Uri.fromFile(new File(mp3_path));
 		mediaplayer_mp3 = MediaPlayer.create(mContext, mp3_uri);
+		if (null == mediaplayer_mp3) {
+			Toast.makeText(mContext, "Loading click sound null!",
+					Toast.LENGTH_SHORT).show();
+			((Activity) mContext).finish();
+			return;
+		}
 		mediaplayer_mp3.setOnCompletionListener(mp3_complete_listener);
 		doPlayMp3File();
 	}

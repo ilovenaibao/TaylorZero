@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.android.taylorzero.R;
 import com.android.taylorzero.TaylorZeroPlayWidgetSound;
 import com.android.taylorzero.login.pic.TaylorZeroPicActivity;
+import com.android.taylorzero.login.pic.TaylorZeroPicActivity2;
 import com.android.taylorzero.login.preface.TaylorZeroPreFaceActivity;
 import com.android.taylorzero.setting.TaylorZeroLoginSetting;
 import com.android.taylorzero.setting.TaylorZeroOpeningSetting;
@@ -114,7 +115,7 @@ public class TaylorZeroChosLogin {
 					mContext);
 			mWidgetSound
 					.playWidgetSoundMp3(TaylorZeroOpeningSetting.click_start_ui_activity_mp3_path);
-			Intent intent = new Intent(mContext, TaylorZeroPicActivity.class);
+			Intent intent = new Intent(mContext, TaylorZeroPicActivity2.class);
 			try {
 				((Activity) mContext)
 						.startActivityForResult(
