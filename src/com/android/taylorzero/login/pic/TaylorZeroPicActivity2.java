@@ -2,7 +2,7 @@ package com.android.taylorzero.login.pic;
 
 import java.io.File;
 
-import android.app.Activity;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -10,10 +10,18 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
+import android.view.animation.Interpolator;
+import android.view.animation.LayoutAnimationController;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -35,6 +43,7 @@ import com.android.taylorzero.login.pic.popdirlist.DSLVFragmentClicks;
 import com.android.taylorzero.login.pic.popdirlist.DragInitModeDialog;
 import com.android.taylorzero.login.pic.popdirlist.EnablesDialog;
 import com.android.taylorzero.login.pic.popdirlist.RemoveModeDialog;
+import com.android.taylorzero.login.pic.popdirlist.TaylorZeroDirListPopWindow;
 import com.android.taylorzero.setting.TaylorZeroPicActivitySetting;
 import com.mobeta.android.dslv.DragSortController;
 
@@ -59,6 +68,9 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 	TaylorZeroPicturesView mOneMirroView = null;
 	MyLibScreenInfo scrInfo = null;
 	View pre_border_select_view = null;
+	LinearLayout list_layout = null;
+	boolean isShowDirListLayout = false;
+	private int popDirListWindowX, popDirListWindowY;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -67,26 +79,27 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 				MyLibScreenSetting.SCREEN_SHOW_THEME_FULL_SCREEN);
 		MyLibScreenSetting.SettingScreenHorizontal(this);
 		setContentView(R.layout.taylorzero_activity_pic2);
-		if (savedInstanceState == null) {
-			LinearLayout list_layout = (LinearLayout) findViewById(R.id.list_layout);
-			if (null != list_layout) {
-				ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) list_layout
-						.getLayoutParams();
-				lp.width = 300;
-				lp.height = 500;
-				list_layout.setLayoutParams(lp);
-				list_layout.setA
-			}
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.test_bed, getNewDslvFragment(), mTag).commit();
-		}
-
 		mContext = this;
 		main_layout = (RelativeLayout) findViewById(R.id.layout1);
 		Gallery gallery = (Gallery) findViewById(R.id.mygallery);
 		scrInfo = MyLibScreenSetting.GetScreenSize(this, 1);
 		scrInfo.scrHeight -= 120;
 		// scrInfo.scrWidth -= 400;
+		if (savedInstanceState == null) {
+			popDirListWindowX = scrInfo.scrWidth / 4;
+			popDirListWindowY = scrInfo.scrHeight;
+			list_layout = (LinearLayout) findViewById(R.id.list_layout);
+			if (null != list_layout) {
+				ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) list_layout
+						.getLayoutParams();
+				lp.width = popDirListWindowX;
+				lp.height = popDirListWindowY;
+				list_layout.setLayoutParams(lp);
+				list_layout.setVisibility(View.GONE);
+			}
+			getSupportFragmentManager().beginTransaction()
+					.add(R.id.test_bed, getNewDslvFragment(), mTag).commit();
+		}
 		picPath = My_Static_Method_Lib.getResAbsolutePath(mContext,
 				TaylorZeroPicActivitySetting.save_pic_path, false);
 		FileTypeFilter pngFileFilter = new FileTypeFilter() {
@@ -117,6 +130,30 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 		gallery.setOnItemLongClickListener(longClickListener);
 		gallery.setOnItemSelectedListener(selectListener);
 
+		ImageView test_dir_list_view = (ImageView) findViewById(R.id.dir_list_imgbt);
+		// dir_list_window = new TaylorZeroDirListPopWindow(this);
+		test_dir_list_view.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				if (null != list_layout) {
+					if (isShowDirListLayout) {
+						list_layout.setVisibility(View.GONE);
+						list_layout.startAnimation(setMyDefineAnimation(2));
+						list_layout
+								.setLayoutAnimation(getAnimationController(2));
+						isShowDirListLayout = false;
+					} else {
+						list_layout.setVisibility(View.VISIBLE);
+						list_layout.startAnimation(setMyDefineAnimation(1));
+						list_layout
+								.setLayoutAnimation(getAnimationController(1));
+						isShowDirListLayout = true;
+					}
+				}
+			}
+		});
 	}
 
 	@Override
@@ -124,6 +161,17 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 		// TODO Auto-generated method stub
 		MyLibScreenSetting.SettingScreenHorizontal(this);
 		super.onResume();
+	}
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO Auto-generated method stub
+		switch (keyCode) {
+		case KeyEvent.KEYCODE_BACK:
+
+			break;
+		}
+		return super.onKeyDown(keyCode, event);
 	}
 
 	private Fragment getNewDslvFragment() {
@@ -137,6 +185,74 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 		return f;
 	}
 
+	@SuppressLint("InlinedApi")
+	private Animation setMyDefineAnimation(int kind) {
+		int duration = 0;
+		Animation animation = null;
+		switch (kind) {
+		case 1:
+			duration = 300;
+			animation = new TranslateAnimation(-popDirListWindowX, 0, 0, 0);
+			animation.setDuration(duration);
+			animation.setInterpolator(mContext,
+					android.R.interpolator.accelerate_decelerate);
+			break;
+		case 2:
+			duration = 500;
+			animation = new TranslateAnimation(0, -popDirListWindowX, 0, 0);
+			animation.setDuration(duration);
+			animation.setInterpolator(mContext,
+					android.R.interpolator.accelerate_decelerate);
+			break;
+		}
+
+		return animation;
+	}
+
+	/**
+	 * Layout动画
+	 * 
+	 * @return
+	 */
+	protected LayoutAnimationController getAnimationController(int kind) {
+		int duration = 0;
+		AnimationSet set = new AnimationSet(true);
+		Animation animation = null;
+		LayoutAnimationController controller = new LayoutAnimationController(
+				set, 0.5f);
+		switch (kind) {
+		case 1:
+			duration = 500;
+			animation = new AlphaAnimation(0.0f, 1.0f);
+			animation.setDuration(duration);
+			set.addAnimation(animation);
+			animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF,
+					0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+					Animation.RELATIVE_TO_SELF, -1.0f,
+					Animation.RELATIVE_TO_SELF, 0.0f);
+			duration = 500;
+			animation.setDuration(duration);
+			set.addAnimation(animation);
+			break;
+		case 2:
+			animation = new AlphaAnimation(1.0f, 0.0f);
+			duration = 500;
+			animation.setDuration(duration);
+			set.addAnimation(animation);
+			animation = new TranslateAnimation(Animation.RELATIVE_TO_SELF,
+					0.0f, Animation.RELATIVE_TO_SELF, 0.0f,
+					Animation.RELATIVE_TO_SELF, 0.0f,
+					Animation.RELATIVE_TO_SELF, 1.0f);
+			duration = 300;
+			animation.setDuration(duration);
+			set.addAnimation(animation);
+			break;
+		}
+
+		controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
+		return controller;
+	}
+
 	private Handler mHandler = new Handler() {
 
 		@Override
@@ -148,6 +264,9 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 					Bitmap bmp = TaylorZeroBmp.loadBitmapAutoSize(picPath
 							+ imageDataList[msg.arg1], scrInfo.scrWidth,
 							scrInfo.scrHeight);
+					// Bitmap bmp = TaylorZeroBmp.loadBitmapAutoSize(picPath
+					// + imageDataList[imageDataList.length - 1],
+					// scrInfo.scrWidth, scrInfo.scrHeight);
 					if (null != bmp) {
 						bmp = TaylorZeroBmp.BitmapRatioMatrix(bmp,
 								scrInfo.scrWidth, scrInfo.scrHeight);
@@ -178,10 +297,10 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 			msg.what = 1;
 			msg.arg1 = arg2;
 			mHandler.sendMessage(msg);
-			arg1.setBackgroundResource(R.drawable.border_select);
+			arg1.setBackgroundResource(R.drawable.gallery_border_select);
 			if (null != pre_border_select_view) {
 				pre_border_select_view
-						.setBackgroundResource(R.drawable.border_un_select);
+						.setBackgroundResource(R.drawable.gallery_border_un_select);
 			}
 			pre_border_select_view = arg1;
 		}

@@ -1,60 +1,73 @@
 package com.android.taylorzero.login.pic.popdirlist;
 
+import android.app.Activity;
 import android.content.Context;
-import android.view.Gravity;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
 
 import com.android.taylorzero.R;
+import com.mobeta.android.dslv.DragSortController;
 
 public class TaylorZeroDirListPopWindow {
 	private Context parentContext = null;
-	public LinearLayout myDirListWindowLayout = null;
-	public PopupWindow dirListWindow = null;
 	public boolean dirListWindowIsShowing;
+	public PopupWindow myListWindow;
 
-	public TaylorZeroDirListPopWindow(Context context, int activity_width,
-			int activity_heigth) {
+	private String mTag = "dslvTag";
+	private int mNumHeaders = 0;
+	private int mNumFooters = 0;
+	private int mDragStartMode = DragSortController.ON_DRAG;
+	private boolean mRemoveEnabled = true;
+	private int mRemoveMode = DragSortController.FLING_REMOVE;
+	private boolean mSortEnabled = true;
+	private boolean mDragEnabled = true;
+
+	public TaylorZeroDirListPopWindow(Context context) {
 		parentContext = context;
 		dirListWindowIsShowing = false;
-		InitializeToolsImageButton(context, activity_width, activity_heigth);
-		Initialize(context);
-	}
-
-	private void Initialize(Context context) {
-		if (myDirListWindowLayout != null) {
-			View tmpV = (View) ((LinearLayout) myDirListWindowLayout);
-			dirListWindow = new PopupWindow(tmpV,
-					ViewGroup.LayoutParams.WRAP_CONTENT,
-					ViewGroup.LayoutParams.WRAP_CONTENT);
-			dirListWindow.setContentView(tmpV);
-			dirListWindow.setAnimationStyle(R.style.PopWindowAnimation);
+		// Taylor add
+		View dirListView = ((Activity) context).getLayoutInflater().inflate(
+				R.layout.dir_list_window, null);
+		RelativeLayout layout = (RelativeLayout) (dirListView
+				.findViewById(R.id.layout_save_loading_main));
+		LinearLayout list_layout = (LinearLayout) dirListView
+				.findViewById(R.id.list_layout_1);
+		if (null != list_layout) {
+			ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) list_layout
+					.getLayoutParams();
+			lp.width = 300;
+			lp.height = 500;
+			list_layout.setLayoutParams(lp);
 		}
-	}
-
-	private void InitializeToolsImageButton(Context context,
-			int activity_width, int activity_heigth) {
-		myDirListWindowLayout = new LinearLayout(context);
-		ViewGroup.LayoutParams param = new ViewGroup.LayoutParams(
+		initializeFragment(context, dirListView);
+		myListWindow = new PopupWindow(dirListView,
 				ViewGroup.LayoutParams.WRAP_CONTENT,
 				ViewGroup.LayoutParams.WRAP_CONTENT);
+		myListWindow.setContentView(dirListView);
+		// myListWindow.setFocusable(true);
+		myListWindow.setAnimationStyle(R.style.PopWindowAnimation);
+		// end
+	}
 
-		LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-				LinearLayout.LayoutParams.FILL_PARENT,
-				LinearLayout.LayoutParams.WRAP_CONTENT);
-		myDirListWindowLayout.setLayoutParams(param);
-		myDirListWindowLayout.setBackgroundDrawable(context.getResources()
-				.getDrawable(R.drawable.layout_xml));
-		myDirListWindowLayout.setOrientation(LinearLayout.VERTICAL);
-		myDirListWindowLayout.setGravity(Gravity.CENTER_HORIZONTAL);
+	private void initializeFragment(Context context, View v) {
+		FragmentActivity tmpFragmentActivity = new FragmentActivity();
+		tmpFragmentActivity.getSupportFragmentManager().beginTransaction()
+				.add(R.id.test_bed_1, getNewDslvFragment(), mTag).commit();
+	}
 
-		LinearLayout oneLineLayout = new LinearLayout(context);
-		oneLineLayout.setLayoutParams(lp);
-		oneLineLayout.setBackgroundDrawable(context.getResources().getDrawable(
-				R.drawable.layout_xml2));
-		oneLineLayout.setOrientation(LinearLayout.HORIZONTAL);
-		myDirListWindowLayout.addView(oneLineLayout);
+	private Fragment getNewDslvFragment() {
+		DSLVFragmentClicks f = DSLVFragmentClicks.newInstance(mNumHeaders,
+				mNumFooters);
+		f.removeMode = mRemoveMode;
+		f.removeEnabled = mRemoveEnabled;
+		f.dragStartMode = mDragStartMode;
+		f.sortEnabled = mSortEnabled;
+		f.dragEnabled = mDragEnabled;
+		return f;
 	}
 }

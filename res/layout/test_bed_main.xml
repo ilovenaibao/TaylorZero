@@ -10,7 +10,7 @@
         android:layout_height="600dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/border_select" >
+        android:background="@drawable/gallery_border_select" >
 
         <FrameLayout
             android:id="@+id/test_bed"
