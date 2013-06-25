@@ -9,10 +9,34 @@ package com.mobeta.android.dslv;
 public final class R {
 	public static final class id {
 		public static final int clickRemove = 0x7f050000;
+		public static final int bt_cancel = 0x7f050014;
+		public static final int bt_ok = 0x7f050013;
 		public static final int onLongPress = 0x7f050004;
+		public static final int exit_tvTitle = 0x7f050012;
 		public static final int flingRemove = 0x7f050001;
 		public static final int onDown = 0x7f050002;
 		public static final int onMove = 0x7f050003;
+	}
+	public static final class style {
+		public static final int TitleStyle = 0x7f080003;
+		public static final int ChooseDialogTile = 0x7f080002;
+		public static final int Animation = 0x7f080001;
+		public static final int Transparent = 0x7f080000;
+		public static final int TitleText = 0x7f080004;
+	}
+	public static final class color {
+		public static final int white = 0x7f060003;
+		public static final int transparent_background = 0x7f060000;
+		public static final int transparent = 0x7f060001;
+		public static final int gray = 0x7f060002;
+	}
+	public static final class string {
+		public static final int exit_title = 0x7f070002;
+		public static final int exit_cancel = 0x7f070001;
+		public static final int exit_ok = 0x7f070000;
+	}
+	public static final class layout {
+		public static final int selectversion = 0x7f03000d;
 	}
 	public static final class styleable {
 		public static final int DragSortListView_use_default_controller = 17;
@@ -34,6 +58,16 @@ public final class R {
 		public static final int DragSortListView_drop_animation_duration = 9;
 		public static final int DragSortListView_drag_handle_id = 14;
 		public static final int DragSortListView_max_drag_scroll_speed = 2;
+	}
+	public static final class drawable {
+		public static final int exit_button_up = 0x7f02000d;
+		public static final int darkgray = 0x7f020020;
+		public static final int blue = 0x7f020023;
+		public static final int white = 0x7f020021;
+		public static final int chose_morlist = 0x7f020007;
+		public static final int exit_button_down = 0x7f02000c;
+		public static final int black = 0x7f020022;
+		public static final int view_yuan_morelist = 0x7f02001e;
 	}
 	public static final class attr {
 		public static final int drop_animation_duration = 0x7f010009;

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import android.content.Context;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,11 @@ import com.mobeta.android.dslv.DragSortController;
 import com.mobeta.android.dslv.DragSortListView;
 
 public class DSLVFragmentBGHandle extends DSLVFragment {
+
+	public DSLVFragmentBGHandle(Context context) {
+		super(context);
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public int getItemLayout() {

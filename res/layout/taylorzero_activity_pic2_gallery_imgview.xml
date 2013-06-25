@@ -3,7 +3,7 @@
     android:id="@+id/gallery_layout"
     android:layout_width="142dp"
     android:layout_height="96dp"
-    android:background="@drawable/gallery_border_select" >
+    android:background="@drawable/gallery_border_un_select" >
 
     <ImageView
         android:id="@+id/imageItem"

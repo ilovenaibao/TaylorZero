@@ -4,24 +4,40 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.IBinder;
+import android.os.Message;
+import android.os.Messenger;
 import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.android.mylib.staticmethod.My_Static_Method_Lib;
 import com.android.taylorzero.R;
+import com.android.taylorzero.setting.TaylorZeroPicActivitySetting;
 import com.mobeta.android.dslv.DragSortController;
 import com.mobeta.android.dslv.DragSortListView;
 
 public class DSLVFragment extends ListFragment {
+	Context parentContext = null;
 
 	ArrayAdapter<String> adapter;
 
 	private String[] array;
 	private ArrayList<String> list;
+
+	public DSLVFragment(Context context) {
+		parentContext = context;
+	}
 
 	private DragSortListView.DropListener onDrop = new DragSortListView.DropListener() {
 		@Override
@@ -73,8 +89,9 @@ public class DSLVFragment extends ListFragment {
 	public boolean sortEnabled = true;
 	public boolean dragEnabled = true;
 
-	public static DSLVFragment newInstance(int headers, int footers) {
-		DSLVFragment f = new DSLVFragment();
+	public static DSLVFragment newInstance(Context context, int headers,
+			int footers) {
+		DSLVFragment f = new DSLVFragment(context);
 
 		Bundle args = new Bundle();
 		args.putInt("headers", headers);
@@ -87,6 +104,112 @@ public class DSLVFragment extends ListFragment {
 	public DragSortController getController() {
 		return mController;
 	}
+
+	// add by Taylor
+	private String DebugTag = "MySearchDirListService->";
+	private boolean debugFlag = false;
+	// local service bound flag
+	Messenger mService = null;
+	boolean mIsBound = false;
+	public final static String SEARCH_PATH_KEY = "ZERO_SEARCH_PATH_KEY";
+
+	/**
+	 * 
+	 * 绑定并启动服务，bind按钮点击时会调用这个方法。
+	 */
+	public void doBindLocalService() {
+		// 绑定并启动服务。
+		mIsBound = parentContext.bindService(new Intent(parentContext,
+				MySearchDirListService.class), mConnection,
+				Context.BIND_AUTO_CREATE);
+		// mIsBound = true;
+
+	}
+
+	class IncomingHandlerFromLocalService extends Handler {
+		public void handleMessage(Message msg) {
+			Bundle bundle = msg.getData();
+			switch (msg.what) {
+			case MySearchDirListService.MSG_UPDATE_LIST_DATA_RESULT:
+				// if (null != totalLayerDataList && 0 <
+				// totalLayerDataList.size()) {
+				// if (null == data_list) {
+				// data_list = new ArrayList<MyOneData>();
+				// } else {
+				// data_list.clear();
+				// }
+				// data_list.addAll(totalLayerDataList.get(0));
+				// }
+				// new
+				// RefreshDownloadFlashCount(chooseSearchOrOldAdapter).start();
+				break;
+			default:
+				super.handleMessage(msg);
+			}
+		}
+	}
+
+	final Messenger mMessenger = new Messenger(
+			new IncomingHandlerFromLocalService());
+
+	private ServiceConnection mConnection = new ServiceConnection() {
+
+		@Override
+		public void onServiceDisconnected(ComponentName name) {
+
+		}
+
+		@Override
+		public void onServiceConnected(ComponentName name, IBinder service) {
+			// 从IBinder对象中获取服务实例。
+			if (debugFlag) {
+				Log.i(DebugTag, "bind local service start");
+			}
+			mService = new Messenger(service);
+			try {
+				// registe service
+				Message msg = Message.obtain(null,
+						MySearchDirListService.MSG_REGISTER_CLIENT);
+				msg.replyTo = mMessenger;
+				mService.send(msg);
+				// update listview data
+				msg = Message.obtain(null,
+						MySearchDirListService.MSG_UPDATE_LIST_DATA);
+				msg.replyTo = mMessenger;
+				mService.send(msg);
+				Bundle mBundle = new Bundle();
+				ArrayList<String> zeroSearchPathArray = new ArrayList<String>();
+				String path = My_Static_Method_Lib.getResAbsolutePath(
+						parentContext,
+						TaylorZeroPicActivitySetting.save_pic_path, false);
+				if (null != path) {
+					zeroSearchPathArray.add(path);
+				}
+				mBundle.putStringArrayList(SEARCH_PATH_KEY, zeroSearchPathArray);
+				msg.setData(mBundle);
+			} catch (Exception e) {
+
+			}
+		}
+	};
+
+	/**
+	 * 
+	 * 解除与服务的绑定，unbind按钮被点击时会调用这个方法
+	 */
+	void doUnbindLocalService() {
+		// 如果服务被绑定，则解除与服务绑定。
+		if (mIsBound) {
+			try {
+				parentContext.unbindService(mConnection);
+			} catch (Exception e) {
+
+			}
+			mIsBound = false;
+		}
+	}
+
+	// add end
 
 	/**
 	 * Called from DSLVFragment.onActivityCreated(). Override to set a different
@@ -116,6 +239,7 @@ public class DSLVFragment extends ListFragment {
 		controller.setSortEnabled(sortEnabled);
 		controller.setDragInitMode(dragStartMode);
 		controller.setRemoveMode(removeMode);
+		controller.setParentContext(parentContext);
 		return controller;
 	}
 

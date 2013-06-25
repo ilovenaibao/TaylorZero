@@ -61,8 +61,8 @@ public class TaylorZeroDirListPopWindow {
 	}
 
 	private Fragment getNewDslvFragment() {
-		DSLVFragmentClicks f = DSLVFragmentClicks.newInstance(mNumHeaders,
-				mNumFooters);
+		DSLVFragmentClicks f = DSLVFragmentClicks.newInstance(parentContext,
+				mNumHeaders, mNumFooters);
 		f.removeMode = mRemoveMode;
 		f.removeEnabled = mRemoveEnabled;
 		f.dragStartMode = mDragStartMode;

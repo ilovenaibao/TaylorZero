@@ -98,13 +98,15 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 				list_layout.setVisibility(View.GONE);
 			}
 			getSupportFragmentManager().beginTransaction()
-					.add(R.id.test_bed, getNewDslvFragment(), mTag).commit();
+					.add(R.id.test_bed, getNewDslvFragment(this), mTag)
+					.commit();
 		}
 		picPath = My_Static_Method_Lib.getResAbsolutePath(mContext,
 				TaylorZeroPicActivitySetting.save_pic_path, false);
 		FileTypeFilter pngFileFilter = new FileTypeFilter() {
 		};
-		pngFileFilter.addType("zero_pic");
+		pngFileFilter
+				.addType(TaylorZeroPicActivitySetting.zero_pic_extern_name);
 		File dir = new File(picPath);
 		String[] pngFileListPath = dir.list(pngFileFilter);
 		imageDataList = pngFileListPath;
@@ -174,9 +176,9 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 		return super.onKeyDown(keyCode, event);
 	}
 
-	private Fragment getNewDslvFragment() {
-		DSLVFragmentClicks f = DSLVFragmentClicks.newInstance(mNumHeaders,
-				mNumFooters);
+	private Fragment getNewDslvFragment(Context context) {
+		DSLVFragmentClicks f = DSLVFragmentClicks.newInstance(context,
+				mNumHeaders, mNumFooters);
 		f.removeMode = mRemoveMode;
 		f.removeEnabled = mRemoveEnabled;
 		f.dragStartMode = mDragStartMode;

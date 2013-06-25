@@ -1,5 +1,6 @@
 package com.android.taylorzero.login.pic.popdirlist;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -18,6 +19,7 @@ public class TestBedDSLV extends FragmentActivity implements
 		RemoveModeDialog.RemoveOkListener, DragInitModeDialog.DragOkListener,
 		EnablesDialog.EnabledOkListener {
 
+	Context parenContext = null;
 	private int mNumHeaders = 0;
 	private int mNumFooters = 0;
 
@@ -33,7 +35,7 @@ public class TestBedDSLV extends FragmentActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.test_bed_main);
-
+		parenContext = this;
 		if (savedInstanceState == null) {
 			LinearLayout list_layout = (LinearLayout) findViewById(R.id.list_layout);
 			if (null != list_layout) {
@@ -87,8 +89,8 @@ public class TestBedDSLV extends FragmentActivity implements
 	}
 
 	private Fragment getNewDslvFragment() {
-		DSLVFragmentClicks f = DSLVFragmentClicks.newInstance(mNumHeaders,
-				mNumFooters);
+		DSLVFragmentClicks f = DSLVFragmentClicks.newInstance(parenContext,
+				mNumHeaders, mNumFooters);
 		f.removeMode = mRemoveMode;
 		f.removeEnabled = mRemoveEnabled;
 		f.dragStartMode = mDragStartMode;
