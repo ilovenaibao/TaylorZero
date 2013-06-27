@@ -60,14 +60,14 @@ public final class R {
 		public static final int DragSortListView_max_drag_scroll_speed = 2;
 	}
 	public static final class drawable {
-		public static final int exit_button_up = 0x7f020010;
-		public static final int darkgray = 0x7f020027;
-		public static final int blue = 0x7f02002a;
-		public static final int white = 0x7f020028;
+		public static final int exit_button_up = 0x7f020011;
+		public static final int darkgray = 0x7f020028;
+		public static final int blue = 0x7f02002b;
+		public static final int white = 0x7f020029;
 		public static final int chose_morlist = 0x7f020007;
-		public static final int exit_button_down = 0x7f02000f;
-		public static final int black = 0x7f020029;
-		public static final int view_yuan_morelist = 0x7f020025;
+		public static final int exit_button_down = 0x7f020010;
+		public static final int black = 0x7f02002a;
+		public static final int view_yuan_morelist = 0x7f020026;
 	}
 	public static final class attr {
 		public static final int drop_animation_duration = 0x7f010009;
