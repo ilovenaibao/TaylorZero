@@ -19,9 +19,9 @@ public final class R {
 		public static final int loading_data = 0x7f070003;
 	}
 	public static final class layout {
-		public static final int my_static_method_lib_loading_view_1 = 0x7f03000b;
-		public static final int my_static_method_lib_dragpapers_scrolllayout = 0x7f030009;
-		public static final int my_static_method_lib_error_printf_view = 0x7f03000a;
-		public static final int my_static_method_lib_media_mp4_view = 0x7f03000c;
+		public static final int my_static_method_lib_loading_view_1 = 0x7f030009;
+		public static final int my_static_method_lib_dragpapers_scrolllayout = 0x7f030007;
+		public static final int my_static_method_lib_error_printf_view = 0x7f030008;
+		public static final int my_static_method_lib_media_mp4_view = 0x7f03000a;
 	}
 }

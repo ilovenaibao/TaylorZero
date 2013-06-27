@@ -19,12 +19,24 @@
         android:fadingEdgeLength="50dp" />
 
     <ImageView
-        android:id="@+id/dir_list_imgbt"
+        android:id="@+id/volume_imgview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/open_volume" />
+
+    <ImageView
+        android:id="@+id/dir_list_imgbt"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:src="@drawable/skip_media_next" />
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/close_folders" />
 
     <LinearLayout
         android:id="@+id/list_layout"

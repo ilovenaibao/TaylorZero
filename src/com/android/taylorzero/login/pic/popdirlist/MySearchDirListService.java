@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import android.app.Service;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
@@ -12,6 +13,9 @@ import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
 
+import com.android.mylib.graphic.MyGraphic;
+import com.android.mylib.xscan.FileTypeFilter;
+import com.android.taylorzero.TaylorZeroBmp;
 import com.android.taylorzero.TaylorZeroPlayBgMp3CallBack.Caller;
 import com.android.taylorzero.setting.TaylorZeroPicActivitySetting;
 
@@ -49,7 +53,45 @@ public class MySearchDirListService extends Service {
 		}
 	}
 
+	public void createPreViewBitmap(String picPath) {
+		int width, height;
+		width = 128;
+		height = 96;
+		char[] picPathChars = picPath.toCharArray();
+		if (File.separator.toCharArray()[0] != picPathChars[picPathChars.length - 1]) {
+			picPath += File.separator;
+		}
+		FileTypeFilter pngFileFilter = new FileTypeFilter() {
+		};
+		pngFileFilter
+				.addType(TaylorZeroPicActivitySetting.zero_pic_extern_name);
+		File dir = new File(picPath);
+		String[] listFileName = dir.list(pngFileFilter);
+		for (int i = 0; null != listFileName && i < listFileName.length; i++) {
+			String targetPath = picPath
+					+ TaylorZeroPicActivitySetting.zero_pre_view_png_path
+					+ File.separator;
+			File tmpFile = new File(targetPath + listFileName[i]);
+			if (tmpFile.exists()) {
+				File srcFile = new File(picPath + listFileName[i]);
+				long srcFileTime = srcFile.lastModified();
+				if (tmpFile.lastModified() < srcFileTime) {
+					tmpFile.delete();
+				}
+			}
+			if (!tmpFile.exists()) {
+				// create new preview pic
+				Bitmap bmp = TaylorZeroBmp.loadBitmapAutoSize(picPath
+						+ listFileName[i], width, height);
+				if (null != bmp) {
+					MyGraphic.SavePicture(targetPath, listFileName[i], bmp);
+				}
+			}
+		}
+	}
+
 	ArrayList<String> getZeroPicDirs = new ArrayList<String>();
+	ArrayList<String> getZeroPicDirsTitle = new ArrayList<String>();
 
 	private void getZeroPicDirsOnePath(File[] dirFiles, String parenPath) {
 		boolean isCheckThisFolder = false;
@@ -61,12 +103,20 @@ public class MySearchDirListService extends Service {
 			} else {
 				String absolutePath = oneDir.getAbsolutePath();
 				if (!isCheckThisFolder
-						&& 0 <= absolutePath.indexOf(".png")
-						|| 0 <= absolutePath
+						&& (0 <= absolutePath.indexOf(".png") || 0 <= absolutePath
 								.indexOf("."
-										+ TaylorZeroPicActivitySetting.zero_pic_extern_name)) {
+										+ TaylorZeroPicActivitySetting.zero_pic_extern_name)
+								&& 0 > absolutePath
+										.indexOf(TaylorZeroPicActivitySetting.zero_pre_view_png_path))) {
 					isCheckThisFolder = true;
+					createPreViewBitmap(parenPath);
 					getZeroPicDirs.add(parenPath);
+					String title = parenPath.substring(parenPath
+							.lastIndexOf(File.separator));
+					if (title.equals(File.separator)) {
+						title = "/default";
+					}
+					getZeroPicDirsTitle.add(title);
 				}
 			}
 		}
@@ -99,6 +149,12 @@ public class MySearchDirListService extends Service {
 
 			// replay to tree list refresh list data
 			Message msgTo = Message.obtain(null, MSG_UPDATE_LIST_DATA_RESULT);
+			Bundle bundleTo = new Bundle();
+			bundleTo.putStringArrayList(DSLVFragment.SEARCH_PATH_KEY,
+					getZeroPicDirs);
+			bundleTo.putStringArrayList(DSLVFragment.SEARCH_PATH_TITLE_KEY,
+					getZeroPicDirsTitle);
+			msgTo.setData(bundleTo);
 			if (null != mClients && 0 < mClients.size()) {
 				try {
 					mClients.get(0).send(msgTo);

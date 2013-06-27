@@ -52,6 +52,7 @@ public class TestPlayMp3Class {
 		bt_playMp3.setOnClickListener(mp3_play_onClick_listener);
 		bt_stopMp3.setOnClickListener(mp3_stop_onClick_listener);
 		bt_pauseMp3.setOnClickListener(mp3_pause_onClick_listener);
+		mediaplayer_mp3.setVolume(0, 0);
 	}
 
 	OnClickListener mp3_play_onClick_listener = new OnClickListener() {

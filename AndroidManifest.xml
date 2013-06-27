@@ -15,6 +15,18 @@
         android:resizeable="true"
         android:smallScreens="true" />
 
+    <uses-permission android:name="besta.permission.INTERNAL_DATA" />
+    <!-- Create and delete in sdcard permission -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- Write data in sdcard permission -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- <uses-permission android:name="android.permission.group.STORAGE" /> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Check and Select Internet connect status -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/application"
@@ -66,6 +78,9 @@
 
             </intent-filter>
         </activity>
+
+        <service android:name="com.android.taylorzero.login.pic.popdirlist.MySearchDirListService" />
+
         <activity
             android:name="com.android.taylorzero.login.pic.popdirlist.TestBedDSLV"
             android:label="Basic usage" >

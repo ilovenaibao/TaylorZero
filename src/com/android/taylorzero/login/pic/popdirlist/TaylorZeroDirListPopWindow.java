@@ -32,7 +32,7 @@ public class TaylorZeroDirListPopWindow {
 		dirListWindowIsShowing = false;
 		// Taylor add
 		View dirListView = ((Activity) context).getLayoutInflater().inflate(
-				R.layout.dir_list_window, null);
+				R.layout.dslv_dir_list_window, null);
 		RelativeLayout layout = (RelativeLayout) (dirListView
 				.findViewById(R.id.layout_save_loading_main));
 		LinearLayout list_layout = (LinearLayout) dirListView

@@ -19,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.mylib.staticmethod.My_Static_Method_Lib;
@@ -29,11 +30,13 @@ import com.mobeta.android.dslv.DragSortListView;
 
 public class DSLVFragment extends ListFragment {
 	Context parentContext = null;
+	public boolean isDataLoadCompelete = false;
 
-	ArrayAdapter<String> adapter;
+	public MyArrayAdapter adapter;
 
 	private String[] array;
-	private ArrayList<String> list;
+	public ArrayList<String> list_show_title = new ArrayList<String>();
+	public ArrayList<String> list_content = new ArrayList<String>();
 
 	public DSLVFragment(Context context) {
 		parentContext = context;
@@ -74,14 +77,14 @@ public class DSLVFragment extends ListFragment {
 		 * R.layout.list_item_handle_right; } else
 		 */
 		if (removeMode == DragSortController.CLICK_REMOVE) {
-			return R.layout.list_item_click_remove;
+			return R.layout.dslv_list_item_click_remove;
 		} else {
-			return R.layout.list_item_handle_left;
+			return R.layout.dslv_list_item_handle_left;
 		}
 	}
 
-	private DragSortListView mDslv;
-	private DragSortController mController;
+	public DragSortListView mDslv;
+	public DragSortController mController;
 
 	public int dragStartMode = DragSortController.ON_DOWN;
 	public boolean removeEnabled = false;
@@ -112,18 +115,17 @@ public class DSLVFragment extends ListFragment {
 	Messenger mService = null;
 	boolean mIsBound = false;
 	public final static String SEARCH_PATH_KEY = "ZERO_SEARCH_PATH_KEY";
+	public final static String SEARCH_PATH_TITLE_KEY = "ZERO_SEARCH_PATH_TITLE_KEY";
 
 	/**
 	 * 
 	 * 绑定并启动服务，bind按钮点击时会调用这个方法。
 	 */
-	public void doBindLocalService() {
+	public void doBindSearchDirListService() {
 		// 绑定并启动服务。
 		mIsBound = parentContext.bindService(new Intent(parentContext,
 				MySearchDirListService.class), mConnection,
 				Context.BIND_AUTO_CREATE);
-		// mIsBound = true;
-
 	}
 
 	class IncomingHandlerFromLocalService extends Handler {
@@ -131,17 +133,21 @@ public class DSLVFragment extends ListFragment {
 			Bundle bundle = msg.getData();
 			switch (msg.what) {
 			case MySearchDirListService.MSG_UPDATE_LIST_DATA_RESULT:
-				// if (null != totalLayerDataList && 0 <
-				// totalLayerDataList.size()) {
-				// if (null == data_list) {
-				// data_list = new ArrayList<MyOneData>();
-				// } else {
-				// data_list.clear();
-				// }
-				// data_list.addAll(totalLayerDataList.get(0));
-				// }
-				// new
-				// RefreshDownloadFlashCount(chooseSearchOrOldAdapter).start();
+				if (null != bundle) {
+					ArrayList<String> zeroPicPath = bundle
+							.getStringArrayList(SEARCH_PATH_KEY);
+					ArrayList<String> zeroPicPathTitle = bundle
+							.getStringArrayList(SEARCH_PATH_TITLE_KEY);
+					if (null != zeroPicPath && null != zeroPicPathTitle) {
+						list_content = zeroPicPath;
+						list_show_title = zeroPicPathTitle;
+						if (null != adapter) {
+							updateLisAdapter();
+							isDataLoadCompelete = true;
+						}
+					}
+				}
+				doUnbindLocalService();
 				break;
 			default:
 				super.handleMessage(msg);
@@ -216,11 +222,19 @@ public class DSLVFragment extends ListFragment {
 	 * adapter.
 	 */
 	public void setListAdapter() {
-		array = getResources().getStringArray(R.array.jazz_artist_names);
-		list = new ArrayList<String>(Arrays.asList(array));
+		// array = getResources().getStringArray(R.array.jazz_artist_names);
+		array = new String[1];
+		array[0] = "default";
+		list_show_title = new ArrayList<String>(Arrays.asList(array));
+		adapter = new MyArrayAdapter(getActivity(), getItemLayout(), R.id.text,
+				list_show_title);
+		setListAdapter(adapter);
+	}
 
-		adapter = new ArrayAdapter<String>(getActivity(), getItemLayout(),
-				R.id.text, list);
+	public void updateLisAdapter() {
+		adapter = new MyArrayAdapter(getActivity(), getItemLayout(), R.id.text,
+				list_show_title);
+		adapter.setSelectPos(0);
 		setListAdapter(adapter);
 	}
 
@@ -261,7 +275,8 @@ public class DSLVFragment extends ListFragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-
+		isDataLoadCompelete = false;
+		doBindSearchDirListService();
 		mDslv = (DragSortListView) getListView();
 
 		mDslv.setDropListener(onDrop);
@@ -289,7 +304,7 @@ public class DSLVFragment extends ListFragment {
 		LayoutInflater inflater = activity.getLayoutInflater();
 		int count = dslv.getHeaderViewsCount();
 
-		TextView header = (TextView) inflater.inflate(R.layout.header_footer,
+		TextView header = (TextView) inflater.inflate(R.layout.dslv_header_footer,
 				null);
 		header.setText("Header #" + (count + 1));
 
@@ -300,7 +315,7 @@ public class DSLVFragment extends ListFragment {
 		LayoutInflater inflater = activity.getLayoutInflater();
 		int count = dslv.getFooterViewsCount();
 
-		TextView footer = (TextView) inflater.inflate(R.layout.header_footer,
+		TextView footer = (TextView) inflater.inflate(R.layout.dslv_header_footer,
 				null);
 		footer.setText("Footer #" + (count + 1));
 

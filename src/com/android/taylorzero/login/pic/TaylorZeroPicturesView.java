@@ -63,13 +63,13 @@ public class TaylorZeroPicturesView extends View {
 	private void touchEvent(MotionEvent event) {
 		switch (event.getAction()) {
 		case MotionEvent.ACTION_DOWN:
-			touchDownEvent(event);
+			// touchDownEvent(event);
 			break;
 		case MotionEvent.ACTION_UP:
 			// touchUpEvent(event);
 			break;
 		case MotionEvent.ACTION_MOVE:
-			touchMoveEvent(event);
+			// touchMoveEvent(event);
 			break;
 		}
 	}

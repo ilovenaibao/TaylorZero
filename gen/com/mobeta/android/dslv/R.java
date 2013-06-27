@@ -36,7 +36,7 @@ public final class R {
 		public static final int exit_ok = 0x7f070000;
 	}
 	public static final class layout {
-		public static final int selectversion = 0x7f03000d;
+		public static final int selectversion = 0x7f03000b;
 	}
 	public static final class styleable {
 		public static final int DragSortListView_use_default_controller = 17;
@@ -60,14 +60,14 @@ public final class R {
 		public static final int DragSortListView_max_drag_scroll_speed = 2;
 	}
 	public static final class drawable {
-		public static final int exit_button_up = 0x7f02000d;
-		public static final int darkgray = 0x7f020020;
-		public static final int blue = 0x7f020023;
-		public static final int white = 0x7f020021;
+		public static final int exit_button_up = 0x7f020010;
+		public static final int darkgray = 0x7f020027;
+		public static final int blue = 0x7f02002a;
+		public static final int white = 0x7f020028;
 		public static final int chose_morlist = 0x7f020007;
-		public static final int exit_button_down = 0x7f02000c;
-		public static final int black = 0x7f020022;
-		public static final int view_yuan_morelist = 0x7f02001e;
+		public static final int exit_button_down = 0x7f02000f;
+		public static final int black = 0x7f020029;
+		public static final int view_yuan_morelist = 0x7f020025;
 	}
 	public static final class attr {
 		public static final int drop_animation_duration = 0x7f010009;

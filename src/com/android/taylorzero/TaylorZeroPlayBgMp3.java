@@ -65,6 +65,14 @@ public class TaylorZeroPlayBgMp3 {
 		}
 	};
 
+	public int getPlayMp3Position() {
+		return mediaplayer_mp3.getCurrentPosition();
+	}
+
+	public void setStarMp3Position(int startOffset) {
+		start_seekTo = startOffset;
+	}
+
 	public void doPlayMp3File() {
 		try {
 			if (mediaplayer_mp3 != null) {
@@ -72,7 +80,7 @@ public class TaylorZeroPlayBgMp3 {
 			}
 			mediaplayer_mp3.prepare();
 			if (isStartPlayReset) {
-				mediaplayer_mp3.seekTo(0);
+				mediaplayer_mp3.seekTo(start_seekTo);
 			}
 			mediaplayer_mp3.start();
 			isPlaying_pre = true;
