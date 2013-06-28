@@ -20,6 +20,7 @@ import com.android.taylorzero.R;
 import com.android.taylorzero.TaylorZeroBmp;
 import com.android.taylorzero.login.pic.TaylorZeroPicturesViewValues.BmpPosValue;
 import com.android.taylorzero.setting.TaylorZeroPicActivitySetting;
+import com.android.taylorzero.setting.TaylorZeroSetting;
 
 public class TaylorZeroPicActivity extends Activity {
 	private final int IMG_CONTROL_PRE = 0;
@@ -48,8 +49,17 @@ public class TaylorZeroPicActivity extends Activity {
 		pic_main_view = (TaylorZeroPicturesView) findViewById(R.id.activity_pic_view);
 		MyLibScreenInfo scrInfo = MyLibScreenSetting.GetScreenSize(this, 1);
 		String path = "/mnt/sdcard/Zero/res/Pic/2.png";
-		path = My_Static_Method_Lib.getResAbsolutePath(mContext,
-				TaylorZeroPicActivitySetting.save_pic_path, false);
+		// path = My_Static_Method_Lib.getResAbsolutePath(mContext,
+		// TaylorZeroPicActivitySetting.save_pic_path, false);
+		path = TaylorZeroSetting.Zero_Data_Real_Path
+				+ TaylorZeroPicActivitySetting.save_pic_path;
+		File tmpFile = new File(path);
+		if (!tmpFile.exists()) {
+			Toast.makeText(mContext, R.string.application_data_err,
+					Toast.LENGTH_SHORT).show();
+			((Activity) mContext).finish();
+			return;
+		}
 		FileTypeFilter pngFileFilter = new FileTypeFilter() {
 		};
 		pngFileFilter.addType("zero_pic");

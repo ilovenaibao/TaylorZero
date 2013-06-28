@@ -1,5 +1,7 @@
 package com.android.taylorzero.login.preface;
 
+import java.io.File;
+
 import android.app.Activity;
 import android.content.Context;
 import android.media.MediaPlayer;
@@ -8,12 +10,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.android.mylib.screen.MyLibScreenSetting;
 import com.android.mylib.staticmethod.My_Static_Method_Lib;
 import com.android.taylorzero.R;
 import com.android.taylorzero.setting.TaylorZeroOpeningSetting;
+import com.android.taylorzero.setting.TaylorZeroSetting;
 
 public class TaylorZeroPreFaceActivity extends Activity {
 	private Context mContext = null;
@@ -72,8 +76,17 @@ public class TaylorZeroPreFaceActivity extends Activity {
 		ImageView bt_openingMp4SeekEnd = (ImageView) ((Activity) mContext)
 				.findViewById(R.id.seek_end_opening_mp4_imgbt);
 		bt_openingMp4SeekEnd.setAlpha(0xA0A0A0A0);
-		String mp4_path = My_Static_Method_Lib.getResAbsolutePath(mContext,
-				TaylorZeroOpeningSetting.preface_mp4_path, false);
+		// String mp4_path = My_Static_Method_Lib.getResAbsolutePath(mContext,
+		// TaylorZeroOpeningSetting.preface_mp4_path, false);
+		String mp4_path = TaylorZeroSetting.Zero_Data_Real_Path
+				+ TaylorZeroOpeningSetting.preface_mp4_path;
+		File tmpFile = new File(mp4_path);
+		if (!tmpFile.exists()) {
+			Toast.makeText(mContext, R.string.application_data_err,
+					Toast.LENGTH_SHORT).show();
+			((Activity) mContext).finish();
+			return;
+		}
 		videoView = (VideoView) ((Activity) mContext)
 				.findViewById(R.id.opening_video_view);
 		/* 设置路径 */

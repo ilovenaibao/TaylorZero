@@ -185,6 +185,7 @@ containing a value of this type.
         public static final int use_default_controller=0x7f010011;
     }
     public static final class color {
+        public static final int activity_transparent=0x7f06000b;
         public static final int bg_handle_pressed=0x7f06000a;
         public static final int black=0x7f060009;
         public static final int blue=0x7f060004;
@@ -218,25 +219,25 @@ containing a value of this type.
         public static final int bg_handle_section1_selector=0x7f020004;
         public static final int bg_handle_section2=0x7f020005;
         public static final int bg_handle_section2_selector=0x7f020006;
-        public static final int black=0x7f02002a;
-        public static final int blue=0x7f02002b;
+        public static final int black=0x7f020030;
+        public static final int blue=0x7f020031;
         public static final int chose_morlist=0x7f020007;
         public static final int close_folders=0x7f020008;
         public static final int close_volume=0x7f020009;
-        public static final int create_new_start=0x7f02000a;
-        public static final int darkgray=0x7f020028;
-        public static final int delete_x=0x7f02000b;
-        public static final int dirlistwindow_border_select=0x7f02000c;
-        public static final int dirlistwindow_border_un_select=0x7f02000d;
-        public static final int drag=0x7f02000e;
-        public static final int drag_select=0x7f02000f;
-        public static final int exit_button_down=0x7f020010;
-        public static final int exit_button_up=0x7f020011;
-        public static final int folder_yellow=0x7f020012;
-        public static final int gallery_border_select=0x7f020013;
-        public static final int gallery_border_un_select=0x7f020014;
-        public static final int ic_dialog_info=0x7f020015;
-        public static final int ic_menu_archive=0x7f020016;
+        public static final int darkgray=0x7f02002e;
+        public static final int delete_x=0x7f02000a;
+        public static final int dirlistwindow_border_select=0x7f02000b;
+        public static final int dirlistwindow_border_un_select=0x7f02000c;
+        public static final int drag=0x7f02000d;
+        public static final int drag_select=0x7f02000e;
+        public static final int exit_button_down=0x7f02000f;
+        public static final int exit_button_up=0x7f020010;
+        public static final int folder_yellow=0x7f020011;
+        public static final int gallery_border_select=0x7f020012;
+        public static final int gallery_border_un_select=0x7f020013;
+        public static final int ic_dialog_info=0x7f020014;
+        public static final int ic_menu_archive=0x7f020015;
+        public static final int ic_menu_search_holo_light=0x7f020016;
         public static final int login_activity_pic_show_next_pic=0x7f020017;
         public static final int login_activity_pic_show_play_pic=0x7f020018;
         public static final int login_activity_pic_show_pre_pic=0x7f020019;
@@ -252,74 +253,92 @@ containing a value of this type.
         public static final int savedata_morlist=0x7f020023;
         public static final int section_div=0x7f020024;
         public static final int skip_media_next=0x7f020025;
-        public static final int view_yuan_morelist=0x7f020026;
-        public static final int white=0x7f020029;
-        public static final int zero_start_bg=0x7f020027;
+        public static final int start_activity_bt_cancel=0x7f020026;
+        public static final int start_activity_bt_ok=0x7f020027;
+        public static final int taylorzero_loading_activity=0x7f020028;
+        public static final int test_app=0x7f020029;
+        public static final int user_add_1=0x7f02002a;
+        public static final int user_add_blue=0x7f02002b;
+        public static final int view_yuan_morelist=0x7f02002c;
+        public static final int white=0x7f02002f;
+        public static final int zero_start_bg=0x7f02002d;
     }
     public static final class id {
         public static final int ScrollLayoutTest=0x7f05000d;
-        public static final int action_settings=0x7f050039;
+        public static final int action_settings=0x7f050045;
         public static final int activity_desc=0x7f05000c;
-        public static final int activity_pic_view=0x7f05001f;
+        public static final int activity_pic_view=0x7f05002a;
         public static final int activity_title=0x7f05000b;
-        public static final int add_footer=0x7f05003e;
-        public static final int add_header=0x7f05003d;
+        public static final int add_footer=0x7f05004a;
+        public static final int add_header=0x7f050049;
         public static final int bt_cancel=0x7f050014;
+        public static final int bt_layout=0x7f050029;
         public static final int bt_ok=0x7f050013;
-        public static final int bt_pauseMp4=0x7f05001b;
-        public static final int bt_pause_mp3=0x7f050018;
-        public static final int bt_playMp4=0x7f050019;
-        public static final int bt_play_mp3=0x7f050016;
-        public static final int bt_stopMp4=0x7f05001a;
-        public static final int bt_stop_mp3=0x7f050017;
+        public static final int bt_pauseMp4=0x7f050024;
+        public static final int bt_pause_mp3=0x7f050021;
+        public static final int bt_playMp4=0x7f050022;
+        public static final int bt_play_mp3=0x7f05001f;
+        public static final int bt_stopMp4=0x7f050023;
+        public static final int bt_stop_mp3=0x7f050020;
         public static final int clickRemove=0x7f050000;
         public static final int click_remove=0x7f050006;
         public static final int current_action_1=0x7f050010;
-        public static final int dir_list_imgbt=0x7f050027;
+        public static final int dir_list_imgbt=0x7f050032;
+        public static final int download_img=0x7f05001d;
+        public static final int download_imgBt=0x7f05001b;
         public static final int drag_handle=0x7f050005;
+        public static final int ed_view=0x7f050037;
+        public static final int editText_Search=0x7f050016;
         public static final int error_printf_tv=0x7f05000e;
         public static final int exit_tvTitle=0x7f050012;
         public static final int flingRemove=0x7f050001;
-        public static final int frameLayout_layout=0x7f050038;
-        public static final int gallery_layout=0x7f05002a;
-        public static final int imageItem=0x7f05002b;
-        public static final int imgview_show_next=0x7f050023;
-        public static final int imgview_show_play=0x7f050022;
-        public static final int imgview_show_pre=0x7f050021;
-        public static final int input_newer_ed=0x7f05001e;
-        public static final int layout1=0x7f050024;
-        public static final int layout_login=0x7f05002c;
-        public static final int layout_play_video=0x7f050032;
+        public static final int frameLayout_layout=0x7f050044;
+        public static final int gallery_layout=0x7f050035;
+        public static final int imageItem=0x7f050036;
+        public static final int imgView=0x7f050018;
+        public static final int imgview_show_next=0x7f05002e;
+        public static final int imgview_show_play=0x7f05002d;
+        public static final int imgview_show_pre=0x7f05002c;
+        public static final int input_ed_layout=0x7f050026;
+        public static final int input_newer_ed=0x7f050028;
+        public static final int layout1=0x7f05002f;
+        public static final int layout_login=0x7f050038;
+        public static final int layout_play_video=0x7f05003e;
         public static final int layout_save_loading_main=0x7f050007;
-        public static final int layout_start_new_view=0x7f050036;
-        public static final int layout_start_new_view_imgview=0x7f050037;
-        public static final int layout_widget=0x7f050020;
-        public static final int list_layout=0x7f050028;
+        public static final int layout_start_new_view=0x7f050042;
+        public static final int layout_start_new_view_imgview=0x7f050043;
+        public static final int layout_widget=0x7f05002b;
+        public static final int list_layout=0x7f050033;
         public static final int list_layout_1=0x7f050008;
         public static final int loading_data_view_1=0x7f05000f;
-        public static final int login_tv_exit=0x7f05002e;
-        public static final int login_tv_loading=0x7f050030;
-        public static final int login_tv_pic=0x7f05002f;
-        public static final int login_tv_preface=0x7f05002d;
-        public static final int login_tv_start=0x7f050031;
-        public static final int mp4_view=0x7f05001c;
+        public static final int loading_list_view=0x7f050017;
+        public static final int login_tv_exit=0x7f05003a;
+        public static final int login_tv_loading=0x7f05003c;
+        public static final int login_tv_pic=0x7f05003b;
+        public static final int login_tv_preface=0x7f050039;
+        public static final int login_tv_start=0x7f05003d;
+        public static final int mp4_view=0x7f050025;
+        public static final int my_list_tv_2=0x7f05001a;
         public static final int my_static_method_lib_media_mp4_view=0x7f050011;
-        public static final int mygallery=0x7f050025;
-        public static final int new_start_imgview=0x7f05001d;
+        public static final int mygallery=0x7f050030;
+        public static final int new_start_imgview=0x7f050027;
         public static final int onDown=0x7f050002;
         public static final int onLongPress=0x7f050004;
         public static final int onMove=0x7f050003;
-        public static final int opening_video_view=0x7f050033;
-        public static final int seek_end_opening_mp4_imgbt=0x7f050035;
-        public static final int select_drag_init_mode=0x7f05003b;
-        public static final int select_enables=0x7f05003c;
-        public static final int select_remove_mode=0x7f05003a;
-        public static final int test_bed=0x7f050029;
+        public static final int opening_video_view=0x7f05003f;
+        public static final int search_img_view=0x7f050015;
+        public static final int seek_end_opening_mp4_imgbt=0x7f050041;
+        public static final int select_drag_init_mode=0x7f050047;
+        public static final int select_enables=0x7f050048;
+        public static final int select_remove_mode=0x7f050046;
+        public static final int taylor_loading_tv=0x7f050019;
+        public static final int test_bed=0x7f050034;
         public static final int test_bed_1=0x7f050009;
         public static final int text=0x7f05000a;
-        public static final int tv_show_path=0x7f050015;
-        public static final int tv_video_caption=0x7f050034;
-        public static final int volume_imgview=0x7f050026;
+        public static final int tmp_tv=0x7f05001c;
+        public static final int tv_show_path=0x7f05001e;
+        public static final int tv_video_caption=0x7f050040;
+        public static final int volume_imgview=0x7f050031;
     }
     public static final class layout {
         public static final int dslv_dir_list_window=0x7f030000;
@@ -334,31 +353,42 @@ containing a value of this type.
         public static final int my_static_method_lib_loading_view_1=0x7f030009;
         public static final int my_static_method_lib_media_mp4_view=0x7f03000a;
         public static final int selectversion=0x7f03000b;
-        public static final int taylorzero_activity_main=0x7f03000c;
-        public static final int taylorzero_activity_newstart=0x7f03000d;
-        public static final int taylorzero_activity_pic=0x7f03000e;
-        public static final int taylorzero_activity_pic2=0x7f03000f;
-        public static final int taylorzero_activity_pic2_gallery_imgview=0x7f030010;
-        public static final int taylorzero_login=0x7f030011;
-        public static final int taylorzero_opening=0x7f030012;
-        public static final int taylorzero_play_video=0x7f030013;
-        public static final int taylorzero_start_new_layout=0x7f030014;
-        public static final int test_bed_main=0x7f030015;
+        public static final int taylorzero_activity_loading=0x7f03000c;
+        public static final int taylorzero_activity_loading_list=0x7f03000d;
+        public static final int taylorzero_activity_main=0x7f03000e;
+        public static final int taylorzero_activity_newstart=0x7f03000f;
+        public static final int taylorzero_activity_pic=0x7f030010;
+        public static final int taylorzero_activity_pic2=0x7f030011;
+        public static final int taylorzero_activity_pic2_gallery_imgview=0x7f030012;
+        public static final int taylorzero_activity_save=0x7f030013;
+        public static final int taylorzero_datacontrol_test=0x7f030014;
+        public static final int taylorzero_login=0x7f030015;
+        public static final int taylorzero_opening=0x7f030016;
+        public static final int taylorzero_play_video=0x7f030017;
+        public static final int taylorzero_start_new_layout=0x7f030018;
+        public static final int test_bed_main=0x7f030019;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
         public static final int mode_menu=0x7f0b0001;
     }
     public static final class string {
-        public static final int action_settings=0x7f070006;
-        /**  Shown in LauncherActivity when the requested target Intent didn't return any matching Activities, leaving the list empty. 
+        public static final int action_settings=0x7f070007;
+        /**  pic2 activity end 
+ Shown in LauncherActivity when the requested target Intent didn't return any matching Activities, leaving the list empty. 
          */
-        public static final int activity_list_empty=0x7f07000e;
-        public static final int add_footer=0x7f070016;
-        public static final int add_header=0x7f070015;
+        public static final int activity_list_empty=0x7f070015;
+        public static final int add_footer=0x7f07001d;
+        public static final int add_header=0x7f07001c;
         public static final int appShutdownStr=0x7f070004;
         public static final int app_name=0x7f070005;
-        public static final int cancel=0x7f070011;
+        public static final int application_data_err=0x7f070006;
+        public static final int cancel=0x7f070018;
+        public static final int cannot_create_usr=0x7f070012;
+        /**  login strings end 
+ start_newer_activity 
+         */
+        public static final int create_user_success=0x7f07000e;
         public static final int exit_cancel=0x7f070001;
         /**  add by taylor 
          */
@@ -366,27 +396,39 @@ containing a value of this type.
         public static final int exit_title=0x7f070002;
         /**  Other description 
          */
-        public static final int gallery_imgview_contentDescribe=0x7f07000f;
-        public static final int hello_world=0x7f070007;
+        public static final int gallery_imgview_contentDescribe=0x7f070016;
+        public static final int hello_world=0x7f070008;
         public static final int loading_data=0x7f070003;
-        public static final int login_exit=0x7f07000b;
-        public static final int login_loading=0x7f070009;
-        public static final int login_pic=0x7f07000a;
-        public static final int login_preface=0x7f07000c;
+        public static final int login_exit=0x7f07000c;
+        public static final int login_loading=0x7f07000a;
+        public static final int login_pic=0x7f07000b;
+        public static final int login_preface=0x7f07000d;
         /**  login strings 
          */
-        public static final int login_start=0x7f070008;
-        public static final int not_found_pic=0x7f07000d;
-        public static final int ok=0x7f070010;
-        public static final int select_drag_init_mode=0x7f070013;
-        public static final int select_enables=0x7f070014;
-        public static final int select_remove_mode=0x7f070012;
+        public static final int login_start=0x7f070009;
+        /**  loading & save data 
+         */
+        public static final int not_found_load_data=0x7f070013;
+        /**  loading & save data end 
+ start_newer_activity end 
+ pic2 activity 
+         */
+        public static final int not_found_pic=0x7f070014;
+        public static final int ok=0x7f070017;
+        public static final int select_drag_init_mode=0x7f07001a;
+        public static final int select_enables=0x7f07001b;
+        public static final int select_remove_mode=0x7f070019;
+        public static final int start_newer_edtext=0x7f07000f;
+        public static final int user_id_len_err=0x7f070010;
+        public static final int user_id_len_null=0x7f070011;
     }
     public static final class style {
+        public static final int ActivityTransparent=0x7f080009;
         public static final int Animation=0x7f080001;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
 
 
 
@@ -400,16 +442,20 @@ containing a value of this type.
 
 
 
+
         
 
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
+
+
     
  API 11 theme customizations can go here. 
 
         Base application theme for API 14+. This theme completely replaces
         AppBaseTheme from BOTH res/values/styles.xml and
         res/values-v11/styles.xml on API 14+ devices.
+
     
  API 14 theme customizations can go here. 
          */

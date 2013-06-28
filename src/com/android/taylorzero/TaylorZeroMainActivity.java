@@ -4,9 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.android.mylib.screen.MyLibScreenSetting;
+import com.android.mylib.staticmethod.My_Static_Method_Lib;
 import com.android.taylorzero.opening.TaylorZeroOpening;
+import com.android.taylorzero.setting.TaylorZeroOpeningSetting;
+import com.android.taylorzero.setting.TaylorZeroSetting;
 
 public class TaylorZeroMainActivity extends Activity {
 	TaylorZeroOpening opening = null;
@@ -18,6 +22,17 @@ public class TaylorZeroMainActivity extends Activity {
 				MyLibScreenSetting.SCREEN_SHOW_THEME_FULL_SCREEN);
 		MyLibScreenSetting.SettingScreenHorizontal(this);
 		setContentView(R.layout.taylorzero_opening);
+		TaylorZeroSetting.Zero_Data_Real_Path = My_Static_Method_Lib
+				.getResAbsolutePath(this, TaylorZeroSetting.Zero_Data_Path,
+						false);
+		if (null == TaylorZeroSetting.Zero_Data_Real_Path
+				|| TaylorZeroSetting.Zero_Data_Real_Path.isEmpty()
+				|| TaylorZeroSetting.Zero_Data_Real_Path.equals("")) {
+			Toast.makeText(this, R.string.application_data_err,
+					Toast.LENGTH_SHORT).show();
+			finish();
+			return;
+		}
 		// start opening view
 		startOpening();
 	}

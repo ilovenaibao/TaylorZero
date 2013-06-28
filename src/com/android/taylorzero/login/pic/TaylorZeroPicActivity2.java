@@ -3,6 +3,7 @@ package com.android.taylorzero.login.pic;
 import java.io.File;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -18,8 +19,6 @@ import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
-import android.view.animation.AnimationUtils;
-import android.view.animation.Interpolator;
 import android.view.animation.LayoutAnimationController;
 import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
@@ -35,7 +34,6 @@ import android.widget.Toast;
 import com.android.mylib.graphic.MyGraphic;
 import com.android.mylib.screen.MyLibScreenInfo;
 import com.android.mylib.screen.MyLibScreenSetting;
-import com.android.mylib.staticmethod.My_Static_Method_Lib;
 import com.android.mylib.xscan.FileTypeFilter;
 import com.android.taylorzero.R;
 import com.android.taylorzero.TaylorZeroBmp;
@@ -45,9 +43,9 @@ import com.android.taylorzero.login.pic.popdirlist.DSLVFragmentClicks;
 import com.android.taylorzero.login.pic.popdirlist.DragInitModeDialog;
 import com.android.taylorzero.login.pic.popdirlist.EnablesDialog;
 import com.android.taylorzero.login.pic.popdirlist.RemoveModeDialog;
-import com.android.taylorzero.login.pic.popdirlist.TaylorZeroDirListPopWindow;
 import com.android.taylorzero.setting.TaylorZeroOpeningSetting;
 import com.android.taylorzero.setting.TaylorZeroPicActivitySetting;
+import com.android.taylorzero.setting.TaylorZeroSetting;
 import com.mobeta.android.dslv.DragSortController;
 
 public class TaylorZeroPicActivity2 extends FragmentActivity implements
@@ -114,8 +112,17 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 					.add(R.id.test_bed, getNewDslvFragment(this), mTag)
 					.commit();
 		}
-		defaultPicPath = My_Static_Method_Lib.getResAbsolutePath(mContext,
-				TaylorZeroPicActivitySetting.save_pic_path, false);
+		// defaultPicPath = My_Static_Method_Lib.getResAbsolutePath(mContext,
+		// TaylorZeroPicActivitySetting.save_pic_path, false);
+		defaultPicPath = TaylorZeroSetting.Zero_Data_Real_Path
+				+ TaylorZeroPicActivitySetting.save_pic_path;
+		File tmpFile = new File(defaultPicPath);
+		if (!tmpFile.exists()) {
+			Toast.makeText(mContext, R.string.application_data_err,
+					Toast.LENGTH_SHORT).show();
+			((Activity) mContext).finish();
+			return;
+		}
 		picPath = defaultPicPath;
 		imageDataList = getImageList(picPath);
 		mOneMirroView = new TaylorZeroPicturesView(mContext);
@@ -141,8 +148,8 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 		gallery.setOnItemSelectedListener(selectListener);
 
 		mPlayBgMp3 = new TaylorZeroPlayBgMp3(this);
-		mPlayBgMp3.playBackGroundMp3(
-				TaylorZeroOpeningSetting.opening_mp3_bg_path, true);
+		mPlayBgMp3.playBackGroundMp3(TaylorZeroSetting.Zero_Data_Real_Path
+				+ TaylorZeroOpeningSetting.opening_mp3_bg_path, true);
 
 		ImageView controllerVolume = (ImageView) findViewById(R.id.volume_imgview);
 		isOpenVolume = true;

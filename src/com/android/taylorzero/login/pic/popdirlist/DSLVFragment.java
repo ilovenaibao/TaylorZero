@@ -1,5 +1,6 @@
 package com.android.taylorzero.login.pic.popdirlist;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -21,10 +22,12 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.mylib.staticmethod.My_Static_Method_Lib;
 import com.android.taylorzero.R;
 import com.android.taylorzero.setting.TaylorZeroPicActivitySetting;
+import com.android.taylorzero.setting.TaylorZeroSetting;
 import com.mobeta.android.dslv.DragSortController;
 import com.mobeta.android.dslv.DragSortListView;
 
@@ -185,9 +188,19 @@ public class DSLVFragment extends ListFragment {
 				mService.send(msg);
 				Bundle mBundle = new Bundle();
 				ArrayList<String> zeroSearchPathArray = new ArrayList<String>();
-				String path = My_Static_Method_Lib.getResAbsolutePath(
-						parentContext,
-						TaylorZeroPicActivitySetting.save_pic_path, false);
+				// String path = My_Static_Method_Lib.getResAbsolutePath(
+				// parentContext,
+				// TaylorZeroPicActivitySetting.save_pic_path, false);
+				String path = TaylorZeroSetting.Zero_Data_Real_Path
+						+ TaylorZeroPicActivitySetting.save_pic_path;
+				File tmpFile = new File(path);
+				if (!tmpFile.exists()) {
+					Toast.makeText(parentContext,
+							R.string.application_data_err, Toast.LENGTH_SHORT)
+							.show();
+					((Activity) parentContext).finish();
+					return;
+				}
 				if (null != path) {
 					zeroSearchPathArray.add(path);
 				}
@@ -304,8 +317,8 @@ public class DSLVFragment extends ListFragment {
 		LayoutInflater inflater = activity.getLayoutInflater();
 		int count = dslv.getHeaderViewsCount();
 
-		TextView header = (TextView) inflater.inflate(R.layout.dslv_header_footer,
-				null);
+		TextView header = (TextView) inflater.inflate(
+				R.layout.dslv_header_footer, null);
 		header.setText("Header #" + (count + 1));
 
 		dslv.addHeaderView(header, null, false);
@@ -315,8 +328,8 @@ public class DSLVFragment extends ListFragment {
 		LayoutInflater inflater = activity.getLayoutInflater();
 		int count = dslv.getFooterViewsCount();
 
-		TextView footer = (TextView) inflater.inflate(R.layout.dslv_header_footer,
-				null);
+		TextView footer = (TextView) inflater.inflate(
+				R.layout.dslv_header_footer, null);
 		footer.setText("Footer #" + (count + 1));
 
 		dslv.addFooterView(footer, null, false);

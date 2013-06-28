@@ -2,13 +2,13 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
@@ -23,6 +23,12 @@
     <style name="PopWindowAnimation">
         <item name="android:windowEnterAnimation">@anim/popwindow_in</item>
         <item name="android:windowExitAnimation">@anim/popwindow_out</item>
+    </style>
+
+    <style name="ActivityTransparent">
+        <item name="android:windowBackground">@color/activity_transparent</item>
+　　		<item name="android:windowIsTranslucent">true</item>
+　　		<item name="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
     </style>
     <!-- add end -->
 

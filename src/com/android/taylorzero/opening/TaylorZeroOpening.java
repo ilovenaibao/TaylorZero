@@ -1,5 +1,7 @@
 package com.android.taylorzero.opening;
 
+import java.io.File;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -13,12 +15,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.android.mylib.staticmethod.My_Static_Method_Lib;
 import com.android.taylorzero.R;
 import com.android.taylorzero.TaylorZeroPlayBgMp3;
 import com.android.taylorzero.setting.TaylorZeroOpeningSetting;
+import com.android.taylorzero.setting.TaylorZeroSetting;
 
 public class TaylorZeroOpening {
 	private Context mContext = null;
@@ -54,8 +58,17 @@ public class TaylorZeroOpening {
 		mLayout_start_new_layout_animation.setVisibility(View.GONE);
 		mp4_show_caption.setVisibility(View.GONE);
 		bt_openingMp4SeekEnd.setAlpha(mp4_seek_end_bt_alpha);
-		String mp4_path = My_Static_Method_Lib.getResAbsolutePath(mContext,
-				TaylorZeroOpeningSetting.opening_mp4_path, false);
+		// String mp4_path = My_Static_Method_Lib.getResAbsolutePath(mContext,
+		// TaylorZeroOpeningSetting.opening_mp4_path, false);
+		String mp4_path = TaylorZeroSetting.Zero_Data_Real_Path
+				+ TaylorZeroOpeningSetting.opening_mp4_path;
+		File tmpFile = new File(mp4_path);
+		if (!tmpFile.exists()) {
+			Toast.makeText(mContext, R.string.application_data_err,
+					Toast.LENGTH_SHORT).show();
+			((Activity) mContext).finish();
+			return;
+		}
 		videoView = (VideoView) ((Activity) mContext)
 				.findViewById(R.id.opening_video_view);
 		/* 设置路径 */
@@ -104,8 +117,8 @@ public class TaylorZeroOpening {
 	private void loadLoginUI() {
 		// start ui bg mp3
 		mPlayBgMp3 = new TaylorZeroPlayBgMp3(mContext);
-		mPlayBgMp3.playBackGroundMp3(
-				TaylorZeroOpeningSetting.opening_mp3_bg_path, true);
+		mPlayBgMp3.playBackGroundMp3(TaylorZeroSetting.Zero_Data_Real_Path
+				+ TaylorZeroOpeningSetting.opening_mp3_bg_path, true);
 		// setting ui
 		RelativeLayout mLayout_play_video = (RelativeLayout) ((Activity) mContext)
 				.findViewById(R.id.layout_play_video);

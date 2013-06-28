@@ -35,10 +35,13 @@ public class TaylorZeroPlayBgMp3 {
 		isStartPlayReset = isResetFlag;
 
 		String mp3_path = "/mnt/sdcard/Zero/test.mp3";
-		mp3_path = My_Static_Method_Lib.getResAbsolutePath(mContext, file_path,
-				false);
-		if (null == mp3_path || mp3_path.equals("")) {
-			Toast.makeText(mContext, "Loading bg sound error!",
+		// mp3_path = My_Static_Method_Lib.getResAbsolutePath(mContext,
+		// file_path,
+		// false);
+		mp3_path = file_path;
+		File tmpFile = new File(mp3_path);
+		if (!tmpFile.exists()) {
+			Toast.makeText(mContext, R.string.application_data_err,
 					Toast.LENGTH_SHORT).show();
 			((Activity) mContext).finish();
 			return;

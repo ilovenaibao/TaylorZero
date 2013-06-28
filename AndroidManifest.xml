@@ -15,7 +15,6 @@
         android:resizeable="true"
         android:smallScreens="true" />
 
-    <uses-permission android:name="besta.permission.INTERNAL_DATA" />
     <!-- Create and delete in sdcard permission -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <!-- Write data in sdcard permission -->
@@ -53,13 +52,39 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="com.android.taylorzero.login.start.TaylorZeroStartActivity" >
+        <activity
+            android:name="com.android.taylorzero.login.start.TaylorZeroStartActivity"
+            android:theme="@style/ActivityTransparent" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
 
                 <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.taylorzero.login.loading.TaylorZeroLoadingActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:icon="@drawable/taylorzero_loading_activity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.taylorzero.login.loading.TaylorZeroSaveActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:icon="@drawable/test_app"
+            android:label="@string/app_name" >
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             </intent-filter>
         </activity>
         <activity
@@ -102,6 +127,20 @@
         <activity
             android:name="com.android.taylorzero.test.TaylorZeroMainActivity_Test"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.taylorzero.test.TaylorZeroDataControlTest"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:icon="@drawable/test_app"
             android:label="@string/app_name" >
             <intent-filter>
 

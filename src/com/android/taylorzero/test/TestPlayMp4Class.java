@@ -1,5 +1,7 @@
 package com.android.taylorzero.test;
 
+import java.io.File;
+
 import android.app.Activity;
 import android.content.Context;
 import android.media.MediaPlayer;
@@ -10,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.MediaController;
+import android.widget.Toast;
 import android.widget.MediaController.MediaPlayerControl;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -19,6 +22,7 @@ import com.android.mylib.media.PlayMediaTime.MediaTimer;
 import com.android.mylib.staticmethod.My_Static_Method_Lib;
 import com.android.taylorzero.R;
 import com.android.taylorzero.setting.TaylorZeroOpeningSetting;
+import com.android.taylorzero.setting.TaylorZeroSetting;
 
 public class TestPlayMp4Class {
 	private Context mContext = null;
@@ -50,8 +54,17 @@ public class TestPlayMp4Class {
 				.findViewById(R.id.bt_stopMp4);
 		bt_pauseMp4 = (Button) ((Activity) mContext)
 				.findViewById(R.id.bt_pauseMp4);
-		String mp4_path = My_Static_Method_Lib.getResAbsolutePath(mContext,
-				TaylorZeroOpeningSetting.opening_mp4_path, false);
+		// String mp4_path = My_Static_Method_Lib.getResAbsolutePath(mContext,
+		// TaylorZeroOpeningSetting.opening_mp4_path, false);
+		String mp4_path = TaylorZeroSetting.Zero_Data_Real_Path
+				+ TaylorZeroOpeningSetting.opening_mp4_path;
+		File tmpFile = new File(mp4_path);
+		if (!tmpFile.exists()) {
+			Toast.makeText(mContext, R.string.application_data_err,
+					Toast.LENGTH_SHORT).show();
+			((Activity) mContext).finish();
+			return;
+		}
 		videoView = (VideoView) ((Activity) mContext)
 				.findViewById(R.id.mp4_view);
 		/* 设置路径 */

@@ -33,12 +33,16 @@ public class TaylorZeroPlayWidgetSound {
 		isPlaying_pre = false;
 
 		String mp3_path = "/mnt/sdcard/Zero/test.mp3";
-		mp3_path = My_Static_Method_Lib.getResAbsolutePath(mContext, file_path,
-				false);
-		if (null == mp3_path || mp3_path.equals("")) {
+		// mp3_path = My_Static_Method_Lib.getResAbsolutePath(mContext,
+		// file_path,
+		// false);
+		mp3_path = file_path;
+		File tmpFile = new File(mp3_path);
+		if (!tmpFile.exists()) {
 			Toast.makeText(mContext, "Loading bg sound error!",
 					Toast.LENGTH_SHORT).show();
 			((Activity) mContext).finish();
+			return;
 		}
 		Uri mp3_uri = Uri.fromFile(new File(mp3_path));
 		mediaplayer_mp3 = MediaPlayer.create(mContext, mp3_uri);

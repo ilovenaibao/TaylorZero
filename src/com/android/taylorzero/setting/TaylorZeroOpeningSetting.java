@@ -8,7 +8,8 @@ public class TaylorZeroOpeningSetting {
 			+ "mp4/";
 	public static final String opening_mp4_path = mp4_path + ".zero_opening";
 	public static final String preface_mp4_path = mp4_path + ".zero_preface";
-	public static final String mp3_path = "Zero/res/Sound/";
+	public static final String mp3_path = TaylorZeroSetting.Zero_Res_Path
+			+ "Sound/";
 	public static final String opening_mp3_bg_path = mp3_path
 			+ "outer/Zero_start_ui_bg.mp3"; // .Zero_start_ui_bg
 	public static final String touch_start_ui_activity_mp3_path = mp3_path

@@ -18,6 +18,7 @@ import com.android.taylorzero.login.preface.TaylorZeroPreFaceActivity;
 import com.android.taylorzero.login.start.TaylorZeroStartActivity;
 import com.android.taylorzero.setting.TaylorZeroLoginSetting;
 import com.android.taylorzero.setting.TaylorZeroOpeningSetting;
+import com.android.taylorzero.setting.TaylorZeroSetting;
 
 public class TaylorZeroChosLogin {
 	private Context mContext = null;
@@ -91,7 +92,8 @@ public class TaylorZeroChosLogin {
 			TaylorZeroPlayWidgetSound mWidgetSound = new TaylorZeroPlayWidgetSound(
 					mContext);
 			mWidgetSound
-					.playWidgetSoundMp3(TaylorZeroOpeningSetting.click_start_ui_activity_mp3_path);
+					.playWidgetSoundMp3(TaylorZeroSetting.Zero_Data_Real_Path
+							+ TaylorZeroOpeningSetting.click_start_ui_activity_mp3_path);
 			Intent intent = new Intent(mContext, TaylorZeroStartActivity.class);
 			try {
 				((Activity) mContext)
@@ -112,7 +114,8 @@ public class TaylorZeroChosLogin {
 			TaylorZeroPlayWidgetSound mWidgetSound = new TaylorZeroPlayWidgetSound(
 					mContext);
 			mWidgetSound
-					.playWidgetSoundMp3(TaylorZeroOpeningSetting.click_start_ui_activity_mp3_path);
+					.playWidgetSoundMp3(TaylorZeroSetting.Zero_Data_Real_Path
+							+ TaylorZeroOpeningSetting.click_start_ui_activity_mp3_path);
 		}
 	};
 
@@ -124,7 +127,8 @@ public class TaylorZeroChosLogin {
 			TaylorZeroPlayWidgetSound mWidgetSound = new TaylorZeroPlayWidgetSound(
 					mContext);
 			mWidgetSound
-					.playWidgetSoundMp3(TaylorZeroOpeningSetting.click_start_ui_activity_mp3_path);
+					.playWidgetSoundMp3(TaylorZeroSetting.Zero_Data_Real_Path
+							+ TaylorZeroOpeningSetting.click_start_ui_activity_mp3_path);
 			Intent intent = new Intent(mContext, TaylorZeroPicActivity2.class);
 			try {
 				((Activity) mContext)
@@ -145,7 +149,8 @@ public class TaylorZeroChosLogin {
 			TaylorZeroPlayWidgetSound mWidgetSound = new TaylorZeroPlayWidgetSound(
 					mContext);
 			mWidgetSound
-					.playWidgetSoundMp3(TaylorZeroOpeningSetting.click_start_ui_activity_mp3_path);
+					.playWidgetSoundMp3(TaylorZeroSetting.Zero_Data_Real_Path
+							+ TaylorZeroOpeningSetting.click_start_ui_activity_mp3_path);
 			((Activity) mContext).finish();
 		}
 	};
@@ -158,7 +163,8 @@ public class TaylorZeroChosLogin {
 			TaylorZeroPlayWidgetSound mWidgetSound = new TaylorZeroPlayWidgetSound(
 					mContext);
 			mWidgetSound
-					.playWidgetSoundMp3(TaylorZeroOpeningSetting.click_start_ui_activity_mp3_path);
+					.playWidgetSoundMp3(TaylorZeroSetting.Zero_Data_Real_Path
+							+ TaylorZeroOpeningSetting.click_start_ui_activity_mp3_path);
 			Intent intent = new Intent(mContext,
 					TaylorZeroPreFaceActivity.class);
 			try {
