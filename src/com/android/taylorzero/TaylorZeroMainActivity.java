@@ -9,7 +9,6 @@ import android.widget.Toast;
 import com.android.mylib.screen.MyLibScreenSetting;
 import com.android.mylib.staticmethod.My_Static_Method_Lib;
 import com.android.taylorzero.opening.TaylorZeroOpening;
-import com.android.taylorzero.setting.TaylorZeroOpeningSetting;
 import com.android.taylorzero.setting.TaylorZeroSetting;
 
 public class TaylorZeroMainActivity extends Activity {

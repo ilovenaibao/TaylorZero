@@ -7,5 +7,5 @@ public class TaylorZeroStartActivitySetting {
 	// usr id folder
 	public final static String Usr_Info_Path = "usr/";
 	// usr initialize info file extend name
-	public final static String Usr_Info_Extend_Name = ".set";
+	public final static String Usr_Info_Extend_Name = "set";
 }

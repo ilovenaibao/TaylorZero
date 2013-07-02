@@ -4,15 +4,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.view.HapticFeedbackConstants;
-import android.view.SoundEffectConstants;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
 import com.android.taylorzero.R;
 import com.android.taylorzero.TaylorZeroPlayWidgetSound;
-import com.android.taylorzero.login.pic.TaylorZeroPicActivity;
 import com.android.taylorzero.login.pic.TaylorZeroPicActivity2;
 import com.android.taylorzero.login.preface.TaylorZeroPreFaceActivity;
 import com.android.taylorzero.login.start.TaylorZeroStartActivity;

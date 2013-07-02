@@ -31,8 +31,8 @@
             android:text=""
             android:textSize="17sp" />
 
-        <com.besta.app.new_bxctreelist.MyTextViewSet
-            android:id="@+id/my_list_tv_2"
+        <com.android.taylorzero.login.loading.TaylorZeroTextView
+            android:id="@+id/taylor_loading_tv_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
@@ -43,7 +43,7 @@
     <RelativeLayout
         android:id="@+id/download_imgBt"
         android:layout_width="50dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_gravity="center_vertical"
         android:layout_weight="0" >
 
@@ -55,10 +55,11 @@
             android:textIsSelectable="true" />
 
         <ImageView
-            android:id="@+id/download_img"
+            android:id="@+id/save_img"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/tmp_tv" />
+            android:layout_toLeftOf="@id/tmp_tv"
+            android:src="@drawable/save_bg" />
     </RelativeLayout>
 
 </LinearLayout>
