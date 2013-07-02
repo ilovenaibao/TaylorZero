@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- add by taylor -->
+    <string name="exit_ok">Yes</string>
+    <string name="exit_cancel">No</string>
+	<string name="exit_title">Delete this folder?</string>
+    <!-- add end -->
+
+</resources>
