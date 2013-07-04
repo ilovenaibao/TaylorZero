@@ -35,6 +35,7 @@ public class RemoveItemDialog {
 		g_showExitDlg = false;
 	}
 
+	@SuppressWarnings("deprecation")
 	public void ShowRemoveDlg() {
 		TextView exit_titleBar = null;
 

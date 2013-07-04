@@ -2,7 +2,6 @@ package com.android.taylorzero.login.pic;
 
 import java.io.File;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -101,7 +100,7 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 			popDirListWindowY = scrInfo.scrHeight;
 			list_layout = (LinearLayout) findViewById(R.id.list_layout);
 			if (null != list_layout) {
-				ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) list_layout
+				ViewGroup.LayoutParams lp = list_layout
 						.getLayoutParams();
 				lp.width = popDirListWindowX;
 				lp.height = popDirListWindowY;
@@ -266,7 +265,6 @@ public class TaylorZeroPicActivity2 extends FragmentActivity implements
 		return f;
 	}
 
-	@SuppressLint("InlinedApi")
 	private Animation setMyDefineAnimation(int kind) {
 		int duration = 0;
 		Animation animation = null;

@@ -704,6 +704,7 @@ public class DragSortListView extends ListView {
 		}
 
 		@Override
+		@SuppressWarnings("deprecation")
 		public View getView(int position, View convertView, ViewGroup parent) {
 
 			DragSortItemView v;
@@ -2244,6 +2245,7 @@ public class DragSortListView extends ListView {
 		return adjust;
 	}
 
+	@SuppressWarnings("deprecation")
 	private void measureItem(View item) {
 		ViewGroup.LayoutParams lp = item.getLayoutParams();
 		if (lp == null) {
@@ -3114,7 +3116,7 @@ public class DragSortListView extends ListView {
 			// means user is scrolling up (list item moves down the screen,
 			// remember
 			// y=0 is at top of View).
-			dy = (int) Math.round(mScrollSpeed * dt);
+			dy = Math.round(mScrollSpeed * dt);
 
 			int movePos;
 			if (dy >= 0) {

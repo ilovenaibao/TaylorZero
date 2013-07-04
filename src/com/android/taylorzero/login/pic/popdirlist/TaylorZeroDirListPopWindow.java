@@ -38,7 +38,7 @@ public class TaylorZeroDirListPopWindow {
 		LinearLayout list_layout = (LinearLayout) dirListView
 				.findViewById(R.id.list_layout_1);
 		if (null != list_layout) {
-			ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) list_layout
+			ViewGroup.LayoutParams lp = list_layout
 					.getLayoutParams();
 			lp.width = 300;
 			lp.height = 500;

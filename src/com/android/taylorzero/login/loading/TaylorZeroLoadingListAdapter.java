@@ -119,8 +119,8 @@ public class TaylorZeroLoadingListAdapter extends BaseAdapter {
 	private Bitmap generatorContactCountIcon(Bitmap icon, Bitmap little_icon,
 			int count) {
 		// 初始化?布
-		int width = (int) icon.getWidth() + 14;
-		int height = (int) icon.getHeight() + 8;
+		int width = icon.getWidth() + 14;
+		int height = icon.getHeight() + 8;
 		// Log.d("download flash!!!", "the icon size is " + width);
 		Bitmap contactIcon = Bitmap.createBitmap(width, height,
 				Config.ARGB_4444);

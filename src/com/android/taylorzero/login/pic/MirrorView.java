@@ -39,6 +39,7 @@ public class MirrorView extends View {
 		this.invalidate();
 	}
 
+	@SuppressWarnings("deprecation")
 	private void _Init() {
 		// m_dw = new
 		// BitmapDrawable(BitmapFactory.decodeResource(getResources(),

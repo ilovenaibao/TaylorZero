@@ -27,6 +27,7 @@ public class DragSortItemView extends ViewGroup {
 
     private int mGravity = Gravity.TOP;
 
+	@SuppressWarnings("deprecation")
     public DragSortItemView(Context context) {
         super(context);
 

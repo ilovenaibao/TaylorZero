@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/talk_dialog_img_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/zero_start_bg" />
+
+    <RelativeLayout
+        android:id="@+id/talk_dialog_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="180dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/talk_dialog_layout_1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/zero_talk_dialog" >
+
+            <TextView
+                android:id="@+id/talk_dialog_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="234567890" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/person_name_tv"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="10px"
+            android:text="12346789" />
+    </RelativeLayout>
+
+</RelativeLayout>

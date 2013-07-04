@@ -39,7 +39,7 @@ public class TestBedDSLV extends FragmentActivity implements
 		if (savedInstanceState == null) {
 			LinearLayout list_layout = (LinearLayout) findViewById(R.id.list_layout);
 			if (null != list_layout) {
-				ViewGroup.LayoutParams lp = (ViewGroup.LayoutParams) list_layout
+				ViewGroup.LayoutParams lp = list_layout
 						.getLayoutParams();
 				lp.width = 300;
 				lp.height = 500;
