@@ -15,6 +15,13 @@
         android:layout_height="50dp"
         android:text="start talk" />
 
+    <Button
+        android:id="@+id/start_select_window"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_toRightOf="@id/start_talk"
+        android:text="start select window" />
+
     <RelativeLayout
         android:id="@+id/talk_dialog_layout"
         android:layout_width="fill_parent"

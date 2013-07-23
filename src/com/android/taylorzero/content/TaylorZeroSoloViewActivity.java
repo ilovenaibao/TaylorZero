@@ -9,7 +9,9 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.android.mylib.screen.MyLibScreenSetting;
+import com.android.mylib.staticmethod.My_Static_Method_Lib;
 import com.android.taylorzero.R;
+import com.android.taylorzero.setting.TaylorZeroSetting;
 
 public class TaylorZeroSoloViewActivity extends Activity {
 	private Context mContext = null;
@@ -27,11 +29,15 @@ public class TaylorZeroSoloViewActivity extends Activity {
 		contentView = (ImageView) findViewById(R.id.solo_img_view);
 		contentView.setVisibility(View.VISIBLE);
 		contentView.setImageResource(R.drawable.be_generic_rgb_wo_60);
+		// get sdk version
+		TaylorZeroSetting.ANDROID_SDK_VERSION = My_Static_Method_Lib
+				.getAndroidSDKVersion();
 		mShowContentThread = new ShowContentThread();
 		mShowContentThread.start();
 	}
 
 	float contentViewAlpha = 1;
+	int contentViewAlphaInt = 255;
 
 	private class ShowContentThread extends Thread {
 
@@ -40,7 +46,11 @@ public class TaylorZeroSoloViewActivity extends Activity {
 
 		protected void runPersonelLogic() {
 			try {
-				for (contentViewAlpha = 1; 0 <= contentViewAlpha;) {
+				contentViewAlpha = 1;
+				contentViewAlphaInt = 255;
+				while (true) {
+					Message msg = new Message();
+					msg.what = 0;
 					if (isSuspend) {
 						while (true) {
 							sleep(500);
@@ -50,9 +60,21 @@ public class TaylorZeroSoloViewActivity extends Activity {
 						}
 					}
 					sleep(50);
-					contentViewAlpha -= 0.01;
-					Message msg = new Message();
-					msg.what = 0;
+					if (11 > TaylorZeroSetting.ANDROID_SDK_VERSION) {
+						contentViewAlphaInt -= 3;
+						if (0 > contentViewAlphaInt) {
+							contentViewAlphaInt = 0;
+							mHandler.sendMessage(msg);
+							break;
+						}
+					} else {
+						contentViewAlpha -= 0.01;
+						if (0 > contentViewAlpha) {
+							contentViewAlpha = 0;
+							mHandler.sendMessage(msg);
+							break;
+						}
+					}
 					mHandler.sendMessage(msg);
 				}
 			} catch (InterruptedException e) {
@@ -76,7 +98,11 @@ public class TaylorZeroSoloViewActivity extends Activity {
 			// TODO Auto-generated method stub
 			switch (msg.what) {
 			case 0:
-				contentView.setAlpha(contentViewAlpha);
+				if (11 > TaylorZeroSetting.ANDROID_SDK_VERSION) {
+					contentView.setAlpha(contentViewAlphaInt);
+				} else {
+					contentView.setAlpha(contentViewAlpha);
+				}
 				break;
 			}
 			super.handleMessage(msg);

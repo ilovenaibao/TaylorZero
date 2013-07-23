@@ -31,6 +31,22 @@
     <!-- Other description -->
     <string name="gallery_imgview_contentDescribe">gallery image view</string>
 
+    <attr name="textwidth" format="integer" />
+    <attr name="typeface">
+        <enum name="normal" value="0" />
+        <enum name="sans" value="1" />
+        <enum name="serif" value="2" />
+        <enum name="monospace" value="3" />
+    </attr>
+
+    <declare-styleable name="CYTextView">
+        <attr name="textwidth" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="reference|color" />
+        <attr name="lineSpacingExtra" format="dimension" />
+        <attr name="typeface" />
+    </declare-styleable>
+
     <!-- add by taylor -->
     <string-array name="activity_titles">
         <item>Basic usage playground</item>

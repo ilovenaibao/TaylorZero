@@ -32,6 +32,9 @@ public class TaylorZeroMainActivity extends Activity {
 			finish();
 			return;
 		}
+		// get sdk version
+		TaylorZeroSetting.ANDROID_SDK_VERSION = My_Static_Method_Lib
+				.getAndroidSDKVersion();
 		// start opening view
 		startOpening();
 	}

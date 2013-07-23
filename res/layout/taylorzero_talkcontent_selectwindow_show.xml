@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/talk_select_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/talk_select_window_morlist"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp" >
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/current_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/app_name" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/talk_select_window_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fastScrollEnabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingTop="10sp"
+        android:smoothScrollbar="true"
+        android:transcriptMode="disabled" >
+    </ListView>
+
+</LinearLayout>

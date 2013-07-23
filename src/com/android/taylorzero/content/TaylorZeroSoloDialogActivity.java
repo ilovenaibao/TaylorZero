@@ -10,8 +10,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.android.mylib.screen.MyLibScreenSetting;
+import com.android.mylib.staticmethod.My_Static_Method_Lib;
 import com.android.taylorzero.R;
 import com.android.taylorzero.setting.TaylorZeroOpeningSetting;
+import com.android.taylorzero.setting.TaylorZeroSetting;
 
 public class TaylorZeroSoloDialogActivity extends Activity {
 	private Context mContext = null;
@@ -35,11 +37,15 @@ public class TaylorZeroSoloDialogActivity extends Activity {
 		contentView.setTypeface(font, Typeface.NORMAL);
 		contentView.setVisibility(View.VISIBLE);
 		contentList = TaylorZeroOpeningSetting.preface_mp4_caption;
+		// get sdk version
+		TaylorZeroSetting.ANDROID_SDK_VERSION = My_Static_Method_Lib
+				.getAndroidSDKVersion();
 		mShowContentThread = new ShowContentThread();
 		mShowContentThread.start();
 	}
 
 	float contentViewAlpha = 1;
+	int contentViewAlphaInt = 0x00FFFFFF;
 	int showContentCount = 0;
 
 	private class ShowContentThread extends Thread {
@@ -49,6 +55,7 @@ public class TaylorZeroSoloDialogActivity extends Activity {
 
 		protected void runPersonelLogic() {
 			try {
+				int textColor = 0x01000000;
 				for (; !isDestroy && null != contentList
 						&& showContentCount < contentList.length; showContentCount++) {
 					if (isSuspend) {
@@ -63,22 +70,43 @@ public class TaylorZeroSoloDialogActivity extends Activity {
 					msg2.what = 0;
 					msg2.arg1 = showContentCount;
 					mHandler.sendMessage(msg2);
-					contentViewAlpha = 0;
-					for (int j = 1000; 1 >= contentViewAlpha && 0 <= j; j--) {
-						Message msg3 = new Message();
-						msg3.what = 2;
-						contentViewAlpha += 0.02;
-						sleep(5);
-						mHandler.sendMessage(msg3);
+					if (11 > TaylorZeroSetting.ANDROID_SDK_VERSION) {
+						contentViewAlphaInt = 0x00FFFFFF;
+						for (int j = 0; 255 > j; j++) {
+							Message msg3 = new Message();
+							msg3.what = 2;
+							contentViewAlphaInt += textColor;
+							sleep(5);
+							mHandler.sendMessage(msg3);
+						}
+					} else {
+						contentViewAlpha = 0;
+						for (int j = 1000; 1 >= contentViewAlpha && 0 <= j; j--) {
+							Message msg3 = new Message();
+							msg3.what = 2;
+							contentViewAlpha += 0.02;
+							sleep(5);
+							mHandler.sendMessage(msg3);
+						}
 					}
 					int oneCharTime = 300;
 					sleep(contentList[showContentCount].length() * oneCharTime);
-					for (int i = 1000; 0 <= contentViewAlpha && 0 <= i; i--) {
-						Message msg = new Message();
-						msg.what = 1;
-						contentViewAlpha -= 0.01;
-						sleep(10);
-						mHandler.sendMessage(msg);
+					if (11 > TaylorZeroSetting.ANDROID_SDK_VERSION) {
+						for (int i = 0; 255 > i; i++) {
+							Message msg = new Message();
+							msg.what = 1;
+							contentViewAlphaInt -= textColor;
+							sleep(10);
+							mHandler.sendMessage(msg);
+						}
+					} else {
+						for (int i = 1000; 0 <= contentViewAlpha && 0 <= i; i--) {
+							Message msg = new Message();
+							msg.what = 1;
+							contentViewAlpha -= 0.01;
+							sleep(10);
+							mHandler.sendMessage(msg);
+						}
 					}
 					sleep(oneCharTime);
 				}
@@ -105,14 +133,26 @@ public class TaylorZeroSoloDialogActivity extends Activity {
 			// TODO Auto-generated method stub
 			switch (msg.what) {
 			case 0:
-				contentView.setAlpha(contentViewAlpha);
+				if (11 > TaylorZeroSetting.ANDROID_SDK_VERSION) {
+					contentView.setTextColor(contentViewAlphaInt);
+				} else {
+					contentView.setAlpha(contentViewAlpha);
+				}
 				contentView.setText(contentList[msg.arg1]);
 				break;
 			case 1:
-				contentView.setAlpha(contentViewAlpha);
+				if (11 > TaylorZeroSetting.ANDROID_SDK_VERSION) {
+					contentView.setTextColor(contentViewAlphaInt);
+				} else {
+					contentView.setAlpha(contentViewAlpha);
+				}
 				break;
 			case 2:
-				contentView.setAlpha(contentViewAlpha);
+				if (11 > TaylorZeroSetting.ANDROID_SDK_VERSION) {
+					contentView.setTextColor(contentViewAlphaInt);
+				} else {
+					contentView.setAlpha(contentViewAlpha);
+				}
 				break;
 			}
 			super.handleMessage(msg);
@@ -147,6 +187,7 @@ public class TaylorZeroSoloDialogActivity extends Activity {
 		MyLibScreenSetting.SettingScreenHorizontal(this);
 		if (null != mShowContentThread && mShowContentThread.isSuspend) {
 			contentViewAlpha = 1;
+			contentViewAlphaInt = 0xFFFFFFFF;
 			showContentCount = pauseShowContentCount;
 			pauseShowContentCount = showContentCount;
 			mShowContentThread.isSuspend = false;
