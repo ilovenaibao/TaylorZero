@@ -12,164 +12,88 @@
   </component>
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <target>android-17</target>
+      </config>
     </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/res/layout/taylorzero_talk_dialog.xml">
+        <config>
+          <device>Nexus 4</device>
+          <state>Landscape</state>
+          <theme>@style/AppTheme_Black_BgColor</theme>
+        </config>
+      </layout>
+    </layouts>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="847d5f94-9f58-4429-b18f-9c61a77a9bbf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragment$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragment$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragment$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragment$IncomingHandlerFromLocalService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragment.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragmentClicks$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragmentClicks$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragmentClicks$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragmentClicks.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DragInitModeDialog$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DragInitModeDialog$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DragInitModeDialog$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DragInitModeDialog$DragOkListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DragInitModeDialog.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/EnablesDialog$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/EnablesDialog$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/EnablesDialog$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/EnablesDialog$EnabledOkListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/EnablesDialog.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/ListViewTest$MyAdapter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/ListViewTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/MyArrayAdapter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/MySearchDirListService$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/MySearchDirListService$IncomingHandlerFromTreeList.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/MySearchDirListService$UpdateDataThread.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/MySearchDirListService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/RemoveModeDialog$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/RemoveModeDialog$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/RemoveModeDialog$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/RemoveModeDialog$RemoveOkListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/RemoveModeDialog.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/TaylorZero.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/TaylorZeroDataControl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/test/TaylorZeroDataControlTest$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/test/TaylorZeroDataControlTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroDefineTextView$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroDefineTextView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/TaylorZeroDirListPopWindow.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/loading/TaylorZeroLoadingActivity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/loading/TaylorZeroLoadingListAdapter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/loading/TaylorZeroLoadingOneData.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/setting/TaylorZeroLoadingSetting.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$5.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$6.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/loading/TaylorZeroSaveActivity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroSoloDialogActivity$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroSoloDialogActivity$ShowContentThread.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroSoloDialogActivity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroSoloViewActivity$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroSoloViewActivity$ShowContentThread.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroSoloViewActivity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/start/TaylorZeroStartActivity$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/start/TaylorZeroStartActivity$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/start/TaylorZeroStartActivity$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/start/TaylorZeroStartActivity$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/start/TaylorZeroStartActivity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/setting/TaylorZeroStartActivitySetting.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity$LoadingTalkContentThread.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkContentSelectWindow$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkContentSelectWindow.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkSelectWindowListAdapter.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkSelectWindowListTextView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkSelectWindowsListOneData.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkTextView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/loading/TaylorZeroTextView.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/TestBedDSLV.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/start_new_activity.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/taylorzero_solo_dialog.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/taylorzero_talk_dialog_new_1.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/taylorzero_talk_dialog_new_2.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/taylorzero_talk_dialog_new_3.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/taylorzero_talk_select_window_list_tag.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gen/com/android/taylorzero/Manifest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroDefineTextView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroTalkContentSelectWindow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroTalkSelectWindowListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroTalkSelectWindowListTextView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroTalkSelectWindowsListOneData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroTalkTextView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/talk_select_window_morlist.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/taylorzero_talk_dialog3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable/taylorzero_talk_select_window_bg.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/taylorzero_talkcontent_select_window_list.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/taylorzero_talkcontent_selectwindow.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/taylorzero_talkcontent_selectwindow_show.xml" />
-      <change type="DELETED" beforePath="G:\My_Android_Project\TaylorZero\gen\com\android\mylib\staticmethod\R.java" afterPath="" />
-      <change type="DELETED" beforePath="G:\My_Android_Project\TaylorZero\gen\com\mobeta\android\dslv\R.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$attr.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/mobeta/android/dslv/R$attr.class" afterPath="$PROJECT_DIR$/bin/classes/com/mobeta/android/dslv/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$color.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/mobeta/android/dslv/R$color.class" afterPath="$PROJECT_DIR$/bin/classes/com/mobeta/android/dslv/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$dimen.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$dimen.class" />
+    <list default="true" id="847d5f94-9f58-4429-b18f-9c61a77a9bbf" name="Default" comment="update commit">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/bg_1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/taylorzero_talk_dialog_color_1.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-nodpi/taylorzero_talk_dialog_color_2.9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroContentActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragment$3.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragment$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragmentClicks$2.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/DSLVFragmentClicks$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/MyArrayAdapter.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/popdirlist/MyArrayAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$drawable.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$drawable.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/mobeta/android/dslv/R$drawable.class" afterPath="$PROJECT_DIR$/bin/classes/com/mobeta/android/dslv/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/mylib/staticmethod/R$id.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/mylib/staticmethod/R$id.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$id.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/mobeta/android/dslv/R$id.class" afterPath="$PROJECT_DIR$/bin/classes/com/mobeta/android/dslv/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/mylib/staticmethod/R$layout.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/mylib/staticmethod/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$layout.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$layout.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$menu.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/mylib/staticmethod/R$string.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/mylib/staticmethod/R$string.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$string.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$string.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$style.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$styleable.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/mobeta/android/dslv/R$styleable.class" afterPath="$PROJECT_DIR$/bin/classes/com/mobeta/android/dslv/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/TaylorZeroMainActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/TaylorZeroMainActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$2.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$3.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$4.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$5.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroChosLogin$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/loading/TaylorZeroLoadingListAdapter.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/loading/TaylorZeroLoadingListAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroOpening.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroOpening.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/setting/TaylorZeroOpeningSetting.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/setting/TaylorZeroOpeningSetting.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$ImageAdapter.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$ImageAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$LoadBitmapThread.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$LoadBitmapThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$2.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$4.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$5.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/pic/TaylorZeroPicActivity2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/preface/TaylorZeroPreFaceActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/login/preface/TaylorZeroPreFaceActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroPreface.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/opening/TaylorZeroPreface.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/setting/TaylorZeroPicActivitySetting.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/setting/TaylorZeroPicActivitySetting.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/setting/TaylorZeroSetting.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/setting/TaylorZeroSetting.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/test/TestPlayMp3Class.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/test/TestPlayMp3Class.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/test/TestPlayMp4Class.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/test/TestPlayMp4Class.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity$1.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity$2.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity$3.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity$LoadingTalkContentThread.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity$LoadingTalkContentThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkContentSelectWindow.class" afterPath="$PROJECT_DIR$/bin/classes/com/android/taylorzero/content/TaylorZeroTalkContentSelectWindow.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/bin/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/android/taylorzero/R.java" afterPath="$PROJECT_DIR$/gen/com/android/taylorzero/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/android/taylorzero/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/android/taylorzero/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/R.txt" afterPath="$PROJECT_DIR$/bin/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/taylorzero/TaylorZeroMainActivity.java" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/TaylorZeroMainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/taylorzero/setting/TaylorZeroOpeningSetting.java" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/setting/TaylorZeroOpeningSetting.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/taylorzero/setting/TaylorZeroPicActivitySetting.java" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/setting/TaylorZeroPicActivitySetting.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/taylorzero/setting/TaylorZeroSetting.java" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/setting/TaylorZeroSetting.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroSoloDialogActivity.java" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroSoloDialogActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroSoloViewActivity.java" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroSoloViewActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroTalkActivity.java" afterPath="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroTalkActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/jarlist.cache" afterPath="$PROJECT_DIR$/bin/jarlist.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/taylorzero_talk_dialog.xml" afterPath="$PROJECT_DIR$/res/layout/taylorzero_talk_dialog.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TaylorZero.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374556390906" ignored="false" />
+    <file path="/Dummy.txt" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374666901803" ignored="false" />
     <file path="/dslv_fragment_main.xml" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1372729447587" ignored="false" />
-    <file path="/fragment.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374550565279" ignored="false" />
+    <file path="/fragment.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374648281669" ignored="false" />
     <file path="/DragSortCursorAdapter.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1372733172731" ignored="false" />
-    <file path="/a.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1372748845410" ignored="false" />
+    <file path="/a.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374633834225" ignored="false" />
     <file path="/TaylorZeroSoloDialogActivity.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1372743980066" ignored="false" />
     <file path="G:/Java_Projects/RealTeaching/src/com/besta/app/realteaching/RealTeachingActivity.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374557179740" ignored="false" />
+    <file path="/a.dummy" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374566315475" ignored="false" />
+    <file path="/taylorzero_talk_dialog.xml" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374570883407" ignored="false" />
+    <file path="/TaylorZeroTalkActivity.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374565708281" ignored="false" />
+    <file path="/sample.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374633830596" ignored="false" />
+    <file path="G:/Java_Projects/RealTeaching/src/com/besta/app/realteachingtestcallapp/test.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374633961569" ignored="false" />
+    <file path="G:/Java_Projects/RealTeaching/.idea/workspace.xml" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374650108639" ignored="false" />
+    <file path="/TaylorZeroSetting.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374646286503" ignored="false" />
+    <file path="/TaylorZeroMainActivity.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374646628598" ignored="false" />
+    <file path="/TaylorZeroContentActivity.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374648198648" ignored="false" />
+    <file path="$PROJECT_DIR$/gen/com/android/taylorzero/R.java" changelist="847d5f94-9f58-4429-b18f-9c61a77a9bbf" time="1374666639067" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,6 +108,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -199,8 +124,8 @@
         <option name="CONDITION_ENABLED" value="true" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -216,20 +141,88 @@
         <option name="CONDITION_ENABLED" value="true" />
         <option name="CLASS_FILTERS_ENABLED" value="false" />
         <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="&#13;&#13;JAVA" />
+        <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
+      </breakpoint>
+    </breakpoint_any>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroSoloViewActivity.java" line="25" class="com.android.taylorzero.content.TaylorZeroSoloViewActivity" package="com.android.taylorzero.content">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-    </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="TaylorZero" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="21" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaylorZeroSoloViewActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroSoloViewActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="35" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaylorZeroDataControl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/TaylorZeroDataControl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="5" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaylorZeroContentActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroContentActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="5" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.712204">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaylorZeroTalkActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroTalkActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="220" column="26" selection-start="7259" selection-end="7259" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -254,6 +247,14 @@
         <option value="$PROJECT_DIR$/src/com/android/taylorzero/TaylorZeroBmp.java" />
         <option value="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroSoloDialogActivity.java" />
         <option value="$PROJECT_DIR$/../My_Static_Method_Lib/src/com/android/mylib/dbtypeconvert/MyDBTypeConvert.java" />
+        <option value="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroTalkActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/taylorzero_talk_dialog.xml" />
+        <option value="$PROJECT_DIR$/src/com/android/taylorzero/setting/TaylorZeroPicActivitySetting.java" />
+        <option value="$PROJECT_DIR$/src/com/android/taylorzero/setting/TaylorZeroOpeningSetting.java" />
+        <option value="$PROJECT_DIR$/src/com/android/taylorzero/setting/TaylorZeroSetting.java" />
+        <option value="$PROJECT_DIR$/src/com/android/taylorzero/TaylorZeroMainActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroContentActivity.java" />
       </list>
     </option>
   </component>
@@ -271,132 +272,20 @@
             <id />
           </State>
           <State>
-            <id>Abstraction issues</id>
+            <id>Android</id>
           </State>
           <State>
             <id>Android Lint</id>
           </State>
           <State>
-            <id>Assignment issues</id>
-          </State>
-          <State>
-            <id>Class metrics</id>
-          </State>
-          <State>
-            <id>Class structure</id>
-          </State>
-          <State>
-            <id>Code maturity issues</id>
-          </State>
-          <State>
-            <id>Code style issues</id>
-          </State>
-          <State>
-            <id>Compiler issues</id>
-          </State>
-          <State>
-            <id>Declaration redundancy</id>
-          </State>
-          <State>
-            <id>Encapsulation issues</id>
-          </State>
-          <State>
-            <id>Error handling</id>
-          </State>
-          <State>
-            <id>Finalization issues</id>
-          </State>
-          <State>
-            <id>GPath inspectionsGroovy</id>
-          </State>
-          <State>
-            <id>Groovy</id>
-          </State>
-          <State>
-            <id>Imports</id>
-          </State>
-          <State>
-            <id>Inheritance issues</id>
-          </State>
-          <State>
-            <id>Internationalization issues</id>
-          </State>
-          <State>
-            <id>J2ME issues</id>
-          </State>
-          <State>
-            <id>JUnit issues</id>
-          </State>
-          <State>
-            <id>Java language level issues</id>
-          </State>
-          <State>
             <id>Java language level migration aids</id>
           </State>
-          <State>
-            <id>JavaBeans issues</id>
-          </State>
-          <State>
-            <id>Javadoc issues</id>
-          </State>
-          <State>
-            <id>Language Injection</id>
-          </State>
-          <State>
-            <id>Logging issues</id>
-          </State>
-          <State>
-            <id>Memory issues</id>
-          </State>
-          <State>
-            <id>Method metrics</id>
-          </State>
-          <State>
-            <id>Naming ConventionsGroovy</id>
-          </State>
-          <State>
-            <id>Naming conventions</id>
-          </State>
-          <State>
-            <id>Numeric issues</id>
-          </State>
-          <State>
-            <id>Performance issues</id>
-          </State>
-          <State>
-            <id>Portability issues</id>
-          </State>
-          <State>
-            <id>Probable bugs</id>
-          </State>
-          <State>
-            <id>Probable bugsGroovy</id>
-          </State>
-          <State>
-            <id>Properties Files</id>
-          </State>
-          <State>
-            <id>Resource management issues</id>
-          </State>
-          <State>
-            <id>Security issues</id>
-          </State>
-          <State>
-            <id>Serialization issues</id>
-          </State>
-          <State>
-            <id>StyleGroovy</id>
-          </State>
-          <State>
-            <id>Threading issues</id>
-          </State>
-          <State>
-            <id>Threading issuesGroovy</id>
-          </State>
-          <State>
-            <id>Visibility issues</id>
-          </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>AndroidLintInlinedApi</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -426,7 +315,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -434,14 +322,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="TaylorZero" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Android 4.2.2 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -451,6 +331,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TaylorZero" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TaylorZero" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TaylorZero" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taylorzero" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TaylorZero" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TaylorZero" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taylorzero" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="content" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -486,58 +406,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TaylorZero" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TaylorZero" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drawable-hdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TaylorZero" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TaylorZero" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib_proj" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TaylorZero" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHOW_ALL_PROCESSES" value="true" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="options.lastSelected" value="Console Folding" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/android-support-v4.jar!/" />
+    <property name="last_opened_file_path" value="G:/Java_Projects/RealTeaching" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="201103015c04676" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -553,29 +437,13 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\My_Android_Project\TaylorZero\res\drawable-nodpi" />
+      <recent name="G:\My_Android_Project\TaylorZero\res\drawable-hdpi" />
+    </key>
+  </component>
   <component name="RunManager" selected="Android Application.TaylorZero">
-    <configuration default="false" name="All in TaylorZero" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="TaylorZero" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -683,15 +551,9 @@
       <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Android Application.TaylorZero" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.All in TaylorZero" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in TaylorZero" />
-      </list>
-    </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -745,7 +607,9 @@
       <workItem from="1372734779363" duration="4598000" />
       <workItem from="1372743842375" duration="4273000" />
       <workItem from="1372907843633" duration="88000" />
-      <workItem from="1374546474014" duration="3171000" />
+      <workItem from="1374546474014" duration="9459000" />
+      <workItem from="1374627139514" duration="6926000" />
+      <workItem from="1374666612709" duration="2055000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1372744480603</created>
@@ -755,11 +619,15 @@
       <created>1372746656218</created>
       <updated>1372746656218</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update commit">
+      <created>1374561184959</created>
+      <updated>1374561184959</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21732000" />
+    <option name="totallyTimeSpent" value="37001000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -787,28 +655,57 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277027" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39932886" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32711864" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39864865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36486486" sideWeight="0.50051284" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.289959" sideWeight="0.7331081" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.289959" sideWeight="0.10641892" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718122" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36655405" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.289959" sideWeight="0.6739865" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3260135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36486486" sideWeight="0.4994872" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8175676" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24948876" sideWeight="0.67114097" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24897541" sideWeight="0.67114097" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33811477" sideWeight="0.41047296" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.589527" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924336" sideWeight="0.67114097" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33401638" sideWeight="0.6013514" order="3" side_tool="false" content_ui="combo" x="349" y="73" width="326" height="592" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5152027" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271795" sideWeight="0.6351351" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.6351351" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.67114097" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271795" sideWeight="0.6351351" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277027" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36486486" sideWeight="0.50051284" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.289959" sideWeight="0.6739865" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3260135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33401638" sideWeight="0.6013514" order="3" side_tool="false" content_ui="combo" x="349" y="73" width="326" height="592" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5152027" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.6351351" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32923076" sideWeight="0.67114097" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293919" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39864865" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.289959" sideWeight="0.7331081" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36486486" sideWeight="0.4994872" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8175676" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24897541" sideWeight="0.67114097" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32885906" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -870,97 +767,111 @@
     <MESSAGE value="update commit" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/login/loading/TaylorZeroLoadingListAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/setting/TaylorZeroStartActivitySetting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="49" selection-start="890" selection-end="890" vertical-scroll-proportion="0.0" />
+        <state line="2" column="13" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/system/compile-server/taylorzero_444ffa91/targets/java-production/TaylorZero/android/generated_sources/aapt/com/android/taylorzero/R.java">
+    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/setting/TaylorZeroLoadingSetting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" />
+        <state line="6" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/login/pic/popdirlist/EnablesDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/setting/TaylorZeroSetting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="32" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0" />
+        <state line="13" column="0" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib_proj/dslv_library/src/com/mobeta/android/dslv/DragSortCursorAdapter.java">
+    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/TaylorZero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="51" selection-start="4614" selection-end="4614" vertical-scroll-proportion="0.7534626" />
+        <state line="5" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/TaylorZeroBmp.java">
+    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/TaylorZeroMainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="28" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" />
+        <state line="43" column="25" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/TaylorZeroPlayBgMp3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="16" selection-start="2112" selection-end="2112" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../My_Static_Method_Lib/src/com/android/mylib/screen/MyLibScreenSetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="23" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroSoloDialogActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="896" selection-end="896" vertical-scroll-proportion="-199.5" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../My_Static_Method_Lib/src/com/android/mylib/dbtypeconvert/MyDBTypeConvert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-nodpi/close_folders.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-nodpi/be_generic_rgb_wo_60.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/drag.9.png">
-      <provider editor-type-id="images">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/res/drawable-nodpi/taylorzero_talk_dialog_test_2.9.png">
       <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
+      <provider editor-type-id="images">
+        <state />
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroTalkActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/opening/TaylorZeroChosLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="53" selection-start="5222" selection-end="5222" vertical-scroll-proportion="0.20036429">
+        <state line="31" column="16" selection-start="1066" selection-end="1066" vertical-scroll-proportion="-0.6921676" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/opening/TaylorZeroOpening.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="30" selection-start="4538" selection-end="4538" vertical-scroll-proportion="0.5747331" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="21" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/app/Activity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="19" selection-start="2223" selection-end="2223" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/android/app/Instrumentation.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="16" selection-start="5963" selection-end="5963" vertical-scroll-proportion="0.33226836" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroSoloViewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="35" selection-start="1316" selection-end="1316" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/TaylorZeroDataControl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="19" selection-start="500" selection-end="500" vertical-scroll-proportion="0.55373406">
+        <state line="17" column="5" selection-start="503" selection-end="503" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/java/lang/ClassLoader.class">
+    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroSoloDialogActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="3253" selection-end="3253" vertical-scroll-proportion="1.8306011">
+        <state line="17" column="13" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/java/lang/Class.class">
+    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroTalkActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="122" column="0" selection-start="5265" selection-end="5265" vertical-scroll-proportion="0.79234976">
+        <state line="220" column="26" selection-start="7259" selection-end="7259" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/taylorzero/content/TaylorZeroContentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="5" selection-start="1131" selection-end="1131" vertical-scroll-proportion="0.712204">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

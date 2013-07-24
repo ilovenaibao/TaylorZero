@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -66,6 +67,7 @@ public class TaylorZeroTalkActivity extends Activity {
 			person_name.setTextSize(20);
 			person_talk = (TextView) findViewById(R.id.talk_dialog_tv);
 			person_talk.setTypeface(font, Typeface.NORMAL);
+            person_talk.setTextColor(Color.WHITE);
 			Button start_talk = (Button) findViewById(R.id.start_talk);
 			start_talk.setOnClickListener(new OnClickListener() {
 

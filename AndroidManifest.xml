@@ -1,72 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.taylorzero"
-    android:versionCode="1"
-    android:versionName="1.0" >
+          package="com.android.taylorzero"
+          android:versionCode="1"
+          android:versionName="1.0">
 
     <uses-sdk
-        android:minSdkVersion="10"
-        android:targetSdkVersion="15" />
+            android:minSdkVersion="10"
+            android:targetSdkVersion="15"/>
 
     <supports-screens
-        android:anyDensity="true"
-        android:largeScreens="true"
-        android:normalScreens="true"
-        android:resizeable="true"
-        android:smallScreens="true" />
+            android:anyDensity="true"
+            android:largeScreens="true"
+            android:normalScreens="true"
+            android:resizeable="true"
+            android:smallScreens="true"/>
 
     <!-- Create and delete in sdcard permission -->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
     <!-- Write data in sdcard permission -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <!-- <uses-permission android:name="android.permission.group.STORAGE" /> -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
     <!-- Check and Select Internet connect status -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
-    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION"/>
 
     <application
-        android:allowBackup="true"
-        android:icon="@drawable/application"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme_Black_BgColor" >
+            android:allowBackup="true"
+            android:icon="@drawable/application"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme_Black_BgColor">
         <activity
-            android:name="com.android.taylorzero.TaylorZeroMainActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:label="@string/app_name" >
+                android:name="com.android.taylorzero.TaylorZeroMainActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.taylorzero.login.preface.TaylorZeroPreFaceActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:label="@string/app_name" >
+                android:name="com.android.taylorzero.login.preface.TaylorZeroPreFaceActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:label="@string/app_name">
             <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.taylorzero.login.start.TaylorZeroStartActivity"
-            android:icon="@drawable/start_new_activity"
-            android:theme="@style/ActivityTransparent" >
+                android:name="com.android.taylorzero.login.start.TaylorZeroStartActivity"
+                android:icon="@drawable/start_new_activity"
+                android:theme="@style/ActivityTransparent">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
 
                 <!-- <category android:name="android.intent.category.DEFAULT" /> -->
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.taylorzero.login.loading.TaylorZeroLoadingActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:icon="@drawable/taylorzero_loading_activity_2"
-            android:label="@string/app_name"
-            android:theme="@style/ActivityTransparent" >
+                android:name="com.android.taylorzero.login.loading.TaylorZeroLoadingActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:icon="@drawable/taylorzero_loading_activity_2"
+                android:label="@string/app_name"
+                android:theme="@style/ActivityTransparent">
             <intent-filter>
 
                 <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -77,11 +77,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.taylorzero.login.loading.TaylorZeroSaveActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:icon="@drawable/test_app"
-            android:label="@string/app_name"
-            android:theme="@style/ActivityTransparent" >
+                android:name="com.android.taylorzero.login.loading.TaylorZeroSaveActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:icon="@drawable/test_app"
+                android:label="@string/app_name"
+                android:theme="@style/ActivityTransparent">
             <intent-filter>
 
                 <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -91,9 +91,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.taylorzero.login.pic.TaylorZeroPicActivity2"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:label="@string/app_name" >
+                android:name="com.android.taylorzero.login.pic.TaylorZeroPicActivity2"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:label="@string/app_name">
             <intent-filter>
 
                 <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -101,67 +101,13 @@
 
                 <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
 
-                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.taylorzero.login.pic.popdirlist.ListViewTest"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:label="@string/app_name" >
-            <intent-filter>
-
-                <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.android.taylorzero.content.TaylorZeroSoloDialogActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:icon="@drawable/taylorzero_solo_dialog"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.android.taylorzero.content.TaylorZeroSoloViewActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:icon="@drawable/taylorzero_loading_activity_2"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.android.taylorzero.content.TaylorZeroTalkActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:icon="@drawable/zero_talk_activity_icon"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <service android:name="com.android.taylorzero.TaylorZeroPlayBgMp3Service" />
-        <service android:name="com.android.taylorzero.login.pic.popdirlist.MySearchDirListService" />
-
-        <activity
-            android:name="com.android.taylorzero.login.pic.popdirlist.TestBedDSLV"
-            android:label="Basic usage" >
-        </activity>
-        <activity
-            android:name="com.android.taylorzero.test.TaylorZeroMainActivity_Test"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:label="@string/app_name" >
+                android:name="com.android.taylorzero.login.pic.popdirlist.ListViewTest"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:label="@string/app_name">
             <intent-filter>
 
                 <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -172,10 +118,50 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.taylorzero.test.TaylorZeroDataControlTest"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:icon="@drawable/test_app"
-            android:label="@string/app_name" >
+                android:name="com.android.taylorzero.content.TaylorZeroSoloDialogActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:icon="@drawable/taylorzero_solo_dialog"
+                android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.android.taylorzero.content.TaylorZeroSoloViewActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:icon="@drawable/taylorzero_loading_activity_2"
+                android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.android.taylorzero.content.TaylorZeroTalkActivity"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:icon="@drawable/zero_talk_activity_icon"
+                android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.android.taylorzero.TaylorZeroPlayBgMp3Service"/>
+        <service android:name="com.android.taylorzero.login.pic.popdirlist.MySearchDirListService"/>
+
+        <activity
+                android:name="com.android.taylorzero.login.pic.popdirlist.TestBedDSLV"
+                android:label="Basic usage">
+        </activity>
+        <activity
+                android:name="com.android.taylorzero.test.TaylorZeroMainActivity_Test"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:label="@string/app_name">
             <intent-filter>
 
                 <!-- <action android:name="android.intent.action.MAIN" /> -->
@@ -186,9 +172,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.android.taylorzero.test.opengl.TutorialPartI"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:label="@string/app_name" >
+                android:name="com.android.taylorzero.test.TaylorZeroDataControlTest"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:icon="@drawable/test_app"
+                android:label="@string/app_name">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.android.taylorzero.test.opengl.TutorialPartI"
+                android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+                android:label="@string/app_name">
             <intent-filter>
 
                 <!-- <action android:name="android.intent.action.MAIN" /> -->
